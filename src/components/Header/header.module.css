@@ -18,6 +18,8 @@
   color: var(--dark-purple);
 }
 
+.navLink:hover,
+.navDropdownButton:hover,
 .navLinkActive{
   text-decoration: underline;
 }
@@ -40,9 +42,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px 1px rgba(3, 3, 3, 0.17);
-}
-
-.navDropdownItemsActive{
 }
 
 .navDropdownItem{

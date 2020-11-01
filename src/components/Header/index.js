@@ -8,10 +8,14 @@ import {motion} from 'framer-motion';
 const Header = () => {
   return (
     <nav className={classes.header}>
-      <img
-        src={logo}
-        alt="Logo"
-      />
+      <Link
+        to={'/'}
+      >
+        <img
+          src={logo}
+          alt="Logo"
+        />
+      </Link>
       <div className={classes.navLinks}>
         <Link
           to={'/'}
