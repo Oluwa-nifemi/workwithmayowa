@@ -1,5 +1,5 @@
 .footer{
-  height: 70px;
+  height: 80px;
   display: grid;
   grid-template-columns: repeat(4, 36px);
   grid-column-gap: 26px;
