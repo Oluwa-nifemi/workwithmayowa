@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import classes from './index.module.css';
-import {Link} from 'gatsby';
-import potrait from '../assets/images/potrait.jpg';
+import {graphql, Link} from 'gatsby';
+import Img from 'gatsby-image';
 
-const Index = () => {
+const Index = ({ data }) => {
   return (
     <Layout
       isPageHeight
@@ -25,8 +25,8 @@ const Index = () => {
       </h1>
       <div className={classes.imageContainer}>
         <div className={classes.imageBg}/>
-        <img
-          src={potrait}
+        <Img
+          fluid={data.file?.childImageSharp?.fluid}
           alt="Mayowa"
           className={classes.image}
         />
@@ -36,3 +36,15 @@ const Index = () => {
 }
 
 export default Index
+
+export const query = graphql`
+    {
+        file(relativePath:{eq:"potrait.jpg"}){
+            childImageSharp{
+                fluid(quality: 80){
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+`
