@@ -1,0 +1,15 @@
+.layout{
+  min-height: 100vh;
+  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+}
+
+.layoutPageHeight{
+  height: 100vh;
+}
+
+.main{
+  padding: 10px 8.6%;
+  flex-grow: 1;
+}
