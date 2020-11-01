@@ -1,0 +1,31 @@
+@import "fonts.css";
+
+:root{
+  --purple: #C09BD8;
+  --pink: #f3dbea;
+  --dark-purple: #6A2C70;
+  --gray: #C09BD8;
+
+  --oswald: "Oswald", serif;
+}
+
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
