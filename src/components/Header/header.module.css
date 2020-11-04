@@ -46,7 +46,7 @@
 
 .navDropdownItem{
   font-family: var(--oswald);
-  font-size: 24px;
+  font-size: 20px;
   color: var(--dark-purple);
   padding: 9px 21px;
 }
