@@ -3,6 +3,7 @@
   background-color: var(--pink);
   display: flex;
   flex-direction: column;
+  background-image: url("../../assets/images/background.png");
 }
 
 .layoutPageHeight{
