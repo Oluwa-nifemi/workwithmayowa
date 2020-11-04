@@ -4,6 +4,7 @@ import tw from '../../assets/images/tw.svg';
 import ig from '../../assets/images/ig.svg';
 import ln from '../../assets/images/ln.svg';
 import mail from '../../assets/images/mail.svg';
+import { classNames } from "../../util/functions"
 
 const smLinks = [
   {
@@ -28,15 +29,23 @@ const smLinks = [
   },
 ]
 
-const Footer = () => {
+const Footer = ({centerFooter}) => {
   return (
-    <footer className={classes.footer}>
+    <footer
+      className={
+        classNames(
+          classes.footer,
+          centerFooter && classes.footerCenter
+        )
+      }
+    >
       {
         smLinks.map(({url, icon, name}) => (
           <a
             href={url}
             target='_blank'
             rel='noreferrer'
+            className={classes.footerLink}
           >
             <img src={icon} alt={name}/>
           </a>

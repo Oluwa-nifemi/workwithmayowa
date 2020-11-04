@@ -1,9 +1,21 @@
 .footer{
   height: 75px;
-  display: grid;
-  grid-template-columns: repeat(4, 36px);
-  grid-column-gap: 26px;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding-left: 8.6%;
   background-color: var(--purple);
+}
+
+.footerCenter{
+  justify-content: center;
+}
+
+.footerLink{
+  width: 25px;
+  display: inline-flex;
+}
+
+.footerLink + .footerLink{
+  margin-left: 26px;
 }

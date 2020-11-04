@@ -9,6 +9,7 @@ const Index = ({ data }) => {
     <Layout
       isPageHeight
       mainClassName={classes.main}
+      centerFooter={false}
     >
       <h1 className={classes.intro}>
         Hello, I’m Mayowa Adeyemi, a {' '}
