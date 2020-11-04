@@ -8,15 +8,18 @@
 .intro {
   font-family: var(--oswald);
   color: var(--dark-purple);
-  font-size: 55px;
-  line-height: 82px;
+  font-size: 50px;
+  line-height: 74px;
   font-weight: 400;
   letter-spacing: 0.3px;
+  max-width: 550px;
 }
 
 .introLink {
   font-weight: 500;
   text-decoration: underline;
+  font-size: 55px;
+  line-height: 82px;
 }
 
 .imageContainer{
@@ -33,7 +36,7 @@
   left: 0;
   background: rgba(192, 155, 216, 0.3);
   border-radius: 10px 0 0 0;
-  width: 400px;
+  width: 360px;
   height: 100%;
 }
 
@@ -41,5 +44,5 @@
   transform: translateX(17px) translateY(17px);
   transition: 300ms;
   border-radius: 10px 0 0 0;
-  width: 400px;
+  width: 360px;
 }
