@@ -1,10 +1,9 @@
 .main{
-  padding: 90px 15% 150px;
+  padding: 70px 25% 100px;
 }
 
 .header{
   font-size: 34px;
-  line-height: 80px;
   font-family: var(--oswald);
   font-weight: normal;
   color: var(--dark-purple);
@@ -13,15 +12,15 @@
 
 .image{
   width: 80%;
-  max-width: 700px;
+  max-width: 470px;
   border-radius: 10px;
   margin: 0 auto 35px;
 }
 
 .text{
   font-family: var(--mulish);
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 25px;
   margin-bottom: 30px;
   color: var(--dark-purple);
   max-width: 950px;
@@ -30,8 +29,8 @@
 .talkLink{
   font-size: 18px;
   line-height: 23px;
-  font-family: var(--roboto);
-  padding: 8px 40px;
+  font-family: var(--mulish);
+  padding: 10px 30px;
   color: white;
   background-color: var(--dark-purple);
   border-radius: 5px;
