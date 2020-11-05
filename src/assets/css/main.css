@@ -6,9 +6,9 @@
   --dark-purple: #6A2C70;
   --gray: #C09BD8;
 
-  --oswald: "Oswald", serif;
-  --roboto: "Roboto", serif;
-  --mulish: "Mulish", serif;
+  --oswald: "Oswald", 'Helvetica';
+  --roboto: "Roboto", 'Helvetica';
+  --mulish: "Mulish", 'Helvetica';
 }
 
 button,
@@ -16,10 +16,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -30,4 +26,5 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }

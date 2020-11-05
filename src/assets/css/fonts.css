@@ -2,36 +2,42 @@
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-Regular.ttf");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-Bold.ttf");
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-Medium.ttf");
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-SemiBold.ttf");
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-ExtraLight.ttf");
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-Light.ttf");
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
