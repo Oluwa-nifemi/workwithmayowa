@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import classes from './index.module.css';
 import {graphql, Link} from 'gatsby';
 import Img from 'gatsby-image';
+import { motion } from "framer-motion"
 
 const Index = ({ data }) => {
   return (
@@ -21,16 +22,55 @@ const Index = ({ data }) => {
         <Link
           to='/works/designer'
           className={classes.introLink}
-        >Designer.
-        </Link>
+        >Designer
+        </Link>.
       </h1>
       <div className={classes.imageContainer}>
         <div className={classes.imageBg}/>
-        <Img
-          fluid={data.file?.childImageSharp?.fluid}
-          alt="Mayowa"
-          className={classes.image}
-        />
+        <motion.div
+          initial='closed'
+          animate='open'
+          variants={{
+            open: {
+              height: '100%',
+              x: 17,
+              y: 17
+            },
+            closed: {
+              height: '0',
+              x: 17,
+              y: 17
+            }
+          }}
+          transition={{ duration: 0.5, delayChildren: 1.5 }}
+          className={classes.imageWrapper}
+          whileHover={{
+            x: 10,
+            y: 10,
+          }}
+        >
+          <motion.div
+            initial='big'
+            animate='small'
+            variants={{
+              big: {
+                scale: 1.4
+              },
+              small: {
+                scale: 1
+              }
+            }}
+            transition={{
+              duration: 0.5
+            }}
+          >
+          <Img
+            fluid={data.file?.childImageSharp?.fluid}
+            alt="Mayowa"
+            className={classes.image}
+          />
+          </motion.div>
+        </motion.div>
       </div>
     </Layout>
   )

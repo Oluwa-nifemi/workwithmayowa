@@ -24,10 +24,9 @@
 
 .imageContainer{
   position: relative;
-}
-
-.imageContainer:hover .image {
-  transform: translateX(10px) translateY(10px);
+  height: 420px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .imageBg {
@@ -40,8 +39,11 @@
   height: 100%;
 }
 
+.imageWrapper{
+  overflow: hidden;
+}
+
 .image {
-  transform: translateX(17px) translateY(17px);
   transition: 300ms;
   border-radius: 10px 0 0 0;
   width: 360px;
