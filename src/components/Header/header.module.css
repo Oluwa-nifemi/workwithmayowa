@@ -37,6 +37,7 @@
 .navDropdownItems{
   position: absolute;
   top: calc(100% + 10px);
+  left: -20px;
   background: #FFFFFF;
   border-radius: 5px;
   overflow: hidden;
