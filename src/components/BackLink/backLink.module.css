@@ -1,0 +1,14 @@
+.backLink{
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-column-gap: 13px;
+  align-items: center;
+}
+
+.backLinkText{
+  font-family: var(--oswald);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 41px;
+  color: var(--dark-purple);
+}
