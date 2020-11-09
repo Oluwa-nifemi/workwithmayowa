@@ -18,11 +18,11 @@ const sections = [
         title: "Radio/Audio",
         to: "/work/writing/radio"
       },
-      {
-        imageId: "digital",
-        title: "Video",
-        to: "/work/writing/video"
-      }
+      // {
+      //   imageId: "digital",
+      //   title: "Video",
+      //   to: "/work/writing/video"
+      // }
     ]
   },
   {
