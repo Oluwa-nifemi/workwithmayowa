@@ -5,11 +5,8 @@ import { classNames } from "../../util/functions"
 import { Link } from "gatsby"
 
 const Card = ({fluid, title, alt, heightUnset = false, to}) => {
-  return (
-    <Link
-      className={classes.card}
-      to={to}
-    >
+  const content = (
+    <>
       <Img
         fluid={fluid}
         alt={alt || title}
@@ -27,6 +24,23 @@ const Card = ({fluid, title, alt, heightUnset = false, to}) => {
           </p>
         )
       }
+    </>
+  )
+
+  if(!to){
+    return (
+      <div className={classes.card}>
+        {content}
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      className={classes.card}
+      to={to}
+    >
+      {content}
     </Link>
   )
 }
