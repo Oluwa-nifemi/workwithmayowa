@@ -12,13 +12,14 @@
 
 .pageTitle{
   font-family: var(--oswald);
+  font-weight: normal;
   font-size: 34px;
   line-height: 50px;
   color: var(--dark-purple);
   text-align: center;
   padding: 12px 0;
-  border-top: 0.2px solid var(--dark-purple);
-  border-bottom: 0.2px solid var(--dark-purple);
+  border-top: 1px solid rgba(106, 44, 112, 0.2);
+  border-bottom: 1px solid rgba(106, 44, 112, 0.2);
   margin-top: 40px;
 }
 
