@@ -2,14 +2,6 @@
   padding: 70px 25% 100px;
 }
 
-.header{
-  font-size: 34px;
-  font-family: var(--oswald);
-  font-weight: normal;
-  color: var(--dark-purple);
-  text-align: center;
-}
-
 .image{
   width: 80%;
   max-width: 470px;

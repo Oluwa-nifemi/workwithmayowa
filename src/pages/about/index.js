@@ -6,10 +6,7 @@ import Img from 'gatsby-image';
 
 const About = ({ data }) => {
   return (
-    <Layout mainClassName={classes.main}>
-      <h1 className={classes.header}>
-        About Mayowa
-      </h1>
+    <Layout mainClassName={classes.main} pageTitle='About Mayowa'>
       <Img
         fluid={data.file?.childImageSharp?.fluid}
         alt="Mayowa"
