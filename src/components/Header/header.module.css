@@ -16,6 +16,7 @@
   font-size: 20px;
   line-height: 30px;
   color: var(--dark-purple);
+  position: relative;
 }
 
 .navLink:hover,

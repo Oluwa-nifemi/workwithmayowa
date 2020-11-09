@@ -58,12 +58,7 @@ const WorkDropdown = () => {
         Work
       </button>
       <motion.div
-        className={
-          classNames(
-            classes.navDropdownItems,
-            show && classes.navDropdownItemsActive
-          )
-        }
+        className={classes.navDropdownItems}
         initial='closed'
         animate={show ? 'open' : 'closed'}
         variants={{
