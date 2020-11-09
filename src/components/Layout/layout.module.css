@@ -10,6 +10,18 @@
   height: 100vh;
 }
 
+.pageTitle{
+  font-family: var(--oswald);
+  font-size: 34px;
+  line-height: 50px;
+  color: var(--dark-purple);
+  text-align: center;
+  padding: 12px 0;
+  border-top: 0.2px solid var(--dark-purple);
+  border-bottom: 0.2px solid var(--dark-purple);
+  margin-top: 40px;
+}
+
 .main{
   padding: 0 8.6%;
   flex-grow: 1;
