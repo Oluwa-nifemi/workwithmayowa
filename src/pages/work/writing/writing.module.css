@@ -3,7 +3,7 @@
 }
 
 .section + .section{
-  margin-top: 75px;
+  padding-top: 75px;
   border-top: 1px solid rgba(106, 44, 112, 0.5);
 }
 
