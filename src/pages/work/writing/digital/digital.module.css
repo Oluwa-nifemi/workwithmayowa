@@ -8,7 +8,7 @@
 
 .item{
   display: grid;
-  grid-template-columns: 0.65fr 1fr;
+  grid-template-columns: minmax(0, 0.65fr) 1fr;
   grid-column-gap: 20px;
   padding: 0 8.6% 100px;
 }

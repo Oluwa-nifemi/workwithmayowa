@@ -33,7 +33,9 @@ const items = [
     description: 'In celebration of the 2020 International Women’s Day with theme “Each For Equal”',
     images: [
       'IWD1',
-      'IWD2'
+      {
+        videoUrl: 'https://youtu.be/UNOoI1pswP8'
+      }
     ]
   },
   {
@@ -70,11 +72,12 @@ const Digital = ({ data }) => {
             <div className={classes.item}>
               <div className={classes.itemImages}>
                 {
-                  images.map(imageId => (
+                  images.map(image => (
                     <Card
-                      fluid={fluidImages[imageId]}
+                      fluid={fluidImages[image]}
                       heightUnset
                       noBorderRadius
+                      videoUrl={image.videoUrl}
                     />
                   ))
                 }
