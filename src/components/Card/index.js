@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { classNames } from "../../util/functions"
 import { Link } from "gatsby"
 
-const Card = ({fluid, title, alt, heightUnset = false, to}) => {
+const Card = ({fluid, title, alt, heightUnset = false, to, noBorderRadius = false}) => {
   const content = (
     <>
       <Img
@@ -13,7 +13,8 @@ const Card = ({fluid, title, alt, heightUnset = false, to}) => {
         className={
           classNames(
             classes.cardImage,
-            heightUnset && classes.cardImageHeightUnset
+            heightUnset && classes.cardImageHeightUnset,
+            noBorderRadius && classes.cardImageNoRadius
           )
         }
       />
