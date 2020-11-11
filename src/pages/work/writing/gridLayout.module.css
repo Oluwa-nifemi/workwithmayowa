@@ -2,19 +2,15 @@
   padding-bottom: 92px;
 }
 
-.items{
-  padding-bottom: 50px;
-}
-
 .item{
   display: grid;
   grid-template-columns: 0.65fr 1fr;
   grid-column-gap: 20px;
-  padding-bottom: 50px;
+  padding: 0 8.6% 75px;
 }
 
 .item + .item{
-  padding-top: 50px;
+  padding-top: 75px;
   border-top: 1px solid rgba(106, 44, 112, 0.2);
 }
 
@@ -27,8 +23,12 @@
   font-family: var(--oswald);
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
-  line-height: 62px;
+  font-size: 30px;
+  line-height: 44px;
   color: var(--dark-purple);
+}
+
+.backLinkWrapper{
+  padding-left: 8.6%;
 }
 

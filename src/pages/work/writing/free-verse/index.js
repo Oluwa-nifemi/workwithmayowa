@@ -38,7 +38,7 @@ const FreeVerse = ({ data }) => {
       pageTitle='Free Verse'
       mainClassName={classes.layout}
     >
-      <div className={classes.items}>
+      <div>
         {
           items.map(({title, images}) => (
             <div className={classes.item}>
@@ -48,6 +48,7 @@ const FreeVerse = ({ data }) => {
                     <Card
                       fluid={fluidImages[imageId]}
                       heightUnset
+                      noBorderRadius
                     />
                   ))
                 }
@@ -61,9 +62,11 @@ const FreeVerse = ({ data }) => {
           ))
         }
       </div>
-      <BackLink to='/work/writing'>
-        Back To Writing
-      </BackLink>
+      <div className={classes.backLinkWrapper}>
+        <BackLink to='/work/writing'>
+          Back To Writing
+        </BackLink>
+      </div>
     </Layout>
   )
 }
