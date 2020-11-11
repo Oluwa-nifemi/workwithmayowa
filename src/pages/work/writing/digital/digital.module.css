@@ -3,14 +3,14 @@
 }
 
 .items{
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .item{
   display: grid;
   grid-template-columns: 0.65fr 1fr;
   grid-column-gap: 20px;
-  padding-bottom: 100px;
+  padding: 0 8.6% 100px;
 }
 
 .item + .item{
@@ -18,17 +18,21 @@
   border-top: 1px solid rgba(106, 44, 112, 0.2);
 }
 
+.item:last-of-type{
+  padding-bottom: 0;
+}
+
 .itemImages{
   display: grid;
-  grid-row-gap: 100px;
+  grid-row-gap: 50px;
 }
 
 .itemName{
   font-family: var(--oswald);
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
-  line-height: 62px;
+  font-size: 30px;
+  line-height: 44px;
   color: var(--dark-purple);
 }
 
@@ -36,7 +40,11 @@
   font-family: var(--mulish);
   font-style: normal;
   font-weight: normal;
-  font-size: 26px;
-  line-height: 33px;
+  font-size: 20px;
+  line-height: 25px;
   color: #75317B;
+}
+
+.backLinkWrapper{
+  padding-left: 8.6%;
 }

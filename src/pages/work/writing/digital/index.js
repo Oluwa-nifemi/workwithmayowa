@@ -74,6 +74,7 @@ const Digital = ({ data }) => {
                     <Card
                       fluid={fluidImages[imageId]}
                       heightUnset
+                      noBorderRadius
                     />
                   ))
                 }
@@ -90,9 +91,11 @@ const Digital = ({ data }) => {
           ))
         }
       </div>
-      <BackLink to='/work/writing'>
-        Back To Writing
-      </BackLink>
+      <div className={classes.backLinkWrapper}>
+        <BackLink to='/work/writing'>
+          Back To Writing
+        </BackLink>
+      </div>
     </Layout>
   )
 }
