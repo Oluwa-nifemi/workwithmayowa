@@ -3,21 +3,43 @@ import classes from './card.module.css'
 import Img from "gatsby-image"
 import { classNames } from "../../util/functions"
 import { Link } from "gatsby"
+import ReactPlayer from "react-player"
 
-const Card = ({fluid, title, alt, heightUnset = false, to, noBorderRadius = false}) => {
+const Card = (
+  {
+    fluid,
+    title,
+    alt,
+    heightUnset = false,
+    to,
+    noBorderRadius = false,
+    videoUrl
+  }
+) => {
   const content = (
     <>
-      <Img
-        fluid={fluid}
-        alt={alt || title}
-        className={
-          classNames(
-            classes.cardImage,
-            heightUnset && classes.cardImageHeightUnset,
-            noBorderRadius && classes.cardImageNoRadius
-          )
-        }
-      />
+      {
+        fluid ? (
+          <Img
+            fluid={fluid}
+            alt={alt || title}
+            className={
+              classNames(
+                classes.cardImage,
+                heightUnset && classes.cardImageHeightUnset,
+                noBorderRadius && classes.cardImageNoRadius
+              )
+            }
+          />
+        ) : (
+          <ReactPlayer
+            url={videoUrl}
+            light
+            width='unset'
+          />
+        )
+      }
+
       {
         title && (
           <p className={classes.cardTitle}>
