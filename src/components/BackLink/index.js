@@ -6,7 +6,7 @@ import arrow from "../../assets/images/arrow.svg"
 const BackLink = ({ to, children }) => {
   return (
     <Link to={to} className={classes.backLink}>
-      <img src={arrow} alt="Arrow" />
+      <img src={arrow} alt="Arrow" className={classes.backLinkImg}/>
       <span className={classes.backLinkText}>
         {children}
       </span>

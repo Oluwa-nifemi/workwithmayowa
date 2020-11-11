@@ -1,14 +1,18 @@
 .backLink{
   display: grid;
-  grid-template-columns: 30px auto;
+  grid-template-columns: 22px auto;
   grid-column-gap: 13px;
   align-items: center;
+}
+
+.backLinkImg{
+  width: 100%;
 }
 
 .backLinkText{
   font-family: var(--oswald);
   font-weight: 500;
-  font-size: 28px;
-  line-height: 41px;
+  font-size: 22px;
+  line-height: 33px;
   color: var(--dark-purple);
 }
