@@ -25,7 +25,7 @@ const items = [
   },
 ]
 
-const FreeVerse = () => {
+const SpokenWord = () => {
   return (
     <Layout
       pageTitle='Free Verse'
@@ -55,4 +55,4 @@ const FreeVerse = () => {
   )
 }
 
-export default FreeVerse
+export default SpokenWord
