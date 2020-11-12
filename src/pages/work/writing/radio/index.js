@@ -17,7 +17,7 @@ const items = [
   {
     fileName: 'fets.mp3',
     name: 'Fetswallet IBEDC',
-    description: 'Children have creative, beautiful minds and these were created to celebrate their imagination.'
+    description: 'Fetswallet, a mobile payment platform, wanted people to know they can now easily pay their Ibadan Electricity Distribution Company (IBEDC) bills from various convenient channels'
   },
   {
     fileName: 'mtn.mp3',
