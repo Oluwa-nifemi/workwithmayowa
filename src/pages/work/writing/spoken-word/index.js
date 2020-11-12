@@ -1,7 +1,6 @@
-import React, { useMemo } from "react"
+import React from "react"
 import Layout from "../../../../components/Layout"
 import classes from "../gridLayout.module.css"
-import Card from "../../../../components/Card"
 import BackLink from "../../../../components/BackLink"
 import ReactPlayer from "react-player"
 
@@ -28,16 +27,18 @@ const items = [
 const SpokenWord = () => {
   return (
     <Layout
-      pageTitle='Free Verse'
+      pageTitle='Spoken Word'
       mainClassName={classes.layout}
     >
-      <div className={classes.items}>
+      <div>
         {
           items.map(({title, embedLink}) => (
             <div className={classes.item}>
               <ReactPlayer
                 url={embedLink}
                 light
+                width='100%'
+                height='460px'
               />
               <div>
                 <h3 className={classes.itemName}>

@@ -1,5 +1,5 @@
 import React from "react"
-import classes from './card.module.css'
+import classes from "./card.module.css"
 import Img from "gatsby-image"
 import { classNames } from "../../util/functions"
 import { Link } from "gatsby"
@@ -36,6 +36,7 @@ const Card = (
             url={videoUrl}
             light
             width='unset'
+            height='400px'
           />
         )
       }
