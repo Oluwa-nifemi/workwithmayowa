@@ -1,0 +1,36 @@
+.item{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 8.6% 75px;
+}
+
+.item + .item{
+  padding-top: 75px;
+  border-top: 1px solid rgba(106, 44, 112, 0.2);
+}
+
+.itemAudio{
+  width: 100%;
+}
+
+.itemName{
+  font-family: var(--oswald);
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--dark-purple);
+}
+
+.itemDescription{
+  font-family: var(--mulish);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--purple-2);
+}
+
+.backLinkWrapper{
+  padding-left: 8.6%;
+  margin-bottom: 50px;
+}
