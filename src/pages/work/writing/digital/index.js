@@ -1,7 +1,7 @@
 import React, { useMemo } from "react"
 import Layout from "../../../../components/Layout"
 import { graphql } from "gatsby"
-import classes from './digital.module.css'
+import classes from "./digital.module.css"
 import Card from "../../../../components/Card"
 import BackLink from "../../../../components/BackLink"
 
@@ -70,6 +70,14 @@ const Digital = ({ data }) => {
         {
           items.map(({title, description, images}) => (
             <div className={classes.item}>
+              <div>
+                <h3 className={classes.itemName}>
+                  {title}
+                </h3>
+                <p className={classes.itemDescription}>
+                  {description}
+                </p>
+              </div>
               <div className={classes.itemImages}>
                 {
                   images.map(image => (
@@ -81,14 +89,6 @@ const Digital = ({ data }) => {
                     />
                   ))
                 }
-              </div>
-              <div>
-                <h3 className={classes.itemName}>
-                  {title}
-                </h3>
-                <p className={classes.itemDescription}>
-                  {description}
-                </p>
               </div>
             </div>
           ))

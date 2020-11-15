@@ -2,21 +2,23 @@
   padding-bottom: 92px;
 }
 
-.item{
+.items{
+  padding-bottom: 50px;
+  padding-left: 25%;
+  padding-right: 25%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  padding: 0 8.6% 75px;
+  grid-row-gap: 150px;
 }
 
-.item + .item{
-  padding-top: 75px;
-  border-top: 1px solid rgba(106, 44, 112, 0.2);
+.item{
+  display: grid;
+  grid-row-gap: 25px;
+  padding: 0 8.6%;
 }
 
 .itemImages{
   display: grid;
-  row-gap: 50px;
+  row-gap: 25px;
 }
 
 .itemName{

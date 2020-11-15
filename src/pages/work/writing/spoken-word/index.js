@@ -30,21 +30,19 @@ const SpokenWord = () => {
       pageTitle='Spoken Word'
       mainClassName={classes.layout}
     >
-      <div>
+      <div className={classes.items}>
         {
           items.map(({title, embedLink}) => (
             <div className={classes.item}>
+              <h3 className={classes.itemName}>
+                {title}
+              </h3>
               <ReactPlayer
                 url={embedLink}
                 light
                 width='100%'
                 height='460px'
               />
-              <div>
-                <h3 className={classes.itemName}>
-                  {title}
-                </h3>
-              </div>
             </div>
           ))
         }

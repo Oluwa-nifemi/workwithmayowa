@@ -38,10 +38,13 @@ const FreeVerse = ({ data }) => {
       pageTitle='Free Verse'
       mainClassName={classes.layout}
     >
-      <div>
+      <div className={classes.items}>
         {
           items.map(({title, images}) => (
             <div className={classes.item}>
+              <h3 className={classes.itemName}>
+                {title}
+              </h3>
               <div className={classes.itemImages}>
                 {
                   images.map(imageId => (
@@ -52,11 +55,6 @@ const FreeVerse = ({ data }) => {
                     />
                   ))
                 }
-              </div>
-              <div>
-                <h3 className={classes.itemName}>
-                  {title}
-                </h3>
               </div>
             </div>
           ))
