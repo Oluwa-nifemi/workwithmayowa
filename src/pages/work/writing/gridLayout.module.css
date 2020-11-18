@@ -13,7 +13,6 @@
 .item{
   display: grid;
   grid-row-gap: 25px;
-  padding: 0 8.6%;
 }
 
 .itemImages{
