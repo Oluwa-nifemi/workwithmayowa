@@ -24,7 +24,7 @@ const Index = ({ data }) => {
       centerFooter={false}
     >
       <h1 className={classes.intro}>
-        Hello, I’m Mayowa Adeyemi, a {' '}
+        Hello, I’m Mayowa Adeyemi, <br/>a {' '}
         <Link
           to='/works/writer'
           className={classes.introLink}

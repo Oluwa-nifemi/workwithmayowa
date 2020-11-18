@@ -29,7 +29,7 @@
   bottom: 5px;
   left: 0;
   height: 5px;
-  background: white;
+  background: var(--dark-purple);
   display: inline-flex;
 }
 
