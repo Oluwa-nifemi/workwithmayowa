@@ -5,6 +5,7 @@ small: false
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -58,7 +59,6 @@ In the previous user flow, a first time user just went straight to filling in de
     ))
   }
 </Carousel>
-<div style={{ marginBottom: '75px' }} />
 
 # Ongoing Use
 The goal here was to ensure that the copy and general experience was as seamless and easy to use as possible for the user. The previous copy had typos, lacked clarity and was inconsistent in its style of capitalization and money formatting.
@@ -66,18 +66,97 @@ The goal here was to ensure that the copy and general experience was as seamless
 # Client Ongoing Use
 The previous decision dialog was confusing as it allowed the client to already take the decision and send payment before asking if they wanted to cancel it. I rewrote the dialog headline as a question and the body text was rewritten so the client could see the decision they were about to take. The button text was also rewritten to properly seek confirmation and prevent the client from making an unintentional mistake.
 
+<Carousel>
+  {
+    props.data.ongoingImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+
+# Client Ongoing Use
+The previous decision dialog was confusing as it allowed the client to already take the decision and send payment before asking if they wanted to cancel it. I rewrote the dialog headline as a question and the body text was rewritten so the client could see the decision they were about to take. The button text was also rewritten to properly seek confirmation and prevent the client from making an unintentional mistake.
+
+# Freelancer Ongoing Use
+## For the freelancer ongoing use, the previous design hid the project description in a tool tip and this was important information so it was added to the main screen in the redesigned version.
+
+The confirmation dialogue text also needed to be rewritten. The headline and body text was edited to be more concise. The previous button text was “Cancel” and “Yes”, this was a problem as it was unclear what would happen if the freelancer clicks either of the buttons. This was rewritten so the freelancer could be sure of what action they were taking when they clicked any of the buttons.
+
+<Carousel>
+  {
+    props.data.freelancerImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+      />
+    ))
+  }
+</Carousel>
+
+# Messaging
+The previous messaging screens were complex and confusing. I redesigned it to make it simpler and more straightforward to use.
+
+<Carousel>
+  {
+    props.data.messagesImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+
+# Next Steps: User Testing
+## It’s important to test the new designs and updated copy with users so as to measure its usability and ensure that it delivers an all round great user experience.
 
 export const pageQuery = graphql`
  {
   signUpImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/sign-up"}}){
+      nodes{
+        name
+        childImageSharp{
+          fluid{
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  ongoingImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/ongoing"}}){
+      nodes{
+        name
+        childImageSharp{
+        fluid{
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  freelancerImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/freelancer"}}){
     nodes{
       name
       childImageSharp{
-        fluid{
-            ...GatsbyImageSharpFluid_withWebp
+      fluid{
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
+  messagesImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/messaging"}}){
+    nodes{
+        name
+        childImageSharp{
+          fluid{
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+    }
  }
 `
+
