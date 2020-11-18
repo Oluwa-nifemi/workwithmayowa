@@ -1,0 +1,83 @@
+---
+title: "Case Study: Handshake app"
+small: false
+---
+
+
+
+import Carousel from "../../../../components/Carousel"
+import { graphql } from "gatsby"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+
+This case study is from the final project of my UX Writing course on UXWC. We were to work on a fictional app called “Handshake”. The project provided already designed screens for us to review and correct the UI texts. After submitting the project and completing the course, I decided to redesign the UI.
+
+### ![Handshake Preview](../../../../assets/images/articles/handshake/1.png)
+
+# Background
+
+Handshake is a fictional app that makes interaction between freelancers and clients more seamless by ensuring that freelancers get paid and helping clients track the progress of work being done. The app is “shared” by these two user types. Each of them has a view of one side of the app: freelancer uses it to send invoices and track hours of work done while client uses it to pay and track progress of hours worked.
+
+# Personas
+
+We were given personas to help us understand the users we were writing for.
+
+### ![Personas](../../../../assets/images/articles/handshake/2.png)
+
+Kelly is a web development graduate who recently started freelancing to save money and pay off student loans. She found out about Handshake from her elder sister who uses it for her catering business. She introduced it to Tom, her client, as an easy way to track progress and take care of billing. Tom runs a small heating and air conditioning business and needs an updated website. He thinks using Handshake is a good idea as he’d like a simple tool to track hours and progress of the work without constantly having to call Kelly.
+
+# Challenge
+
+## After reviewing the UI texts in the screens we were given, I noticed problems that would make the app difficult for users like Kelly and Tom. Some of these problems include:
+
+- Unclear copy that confused users on how to navigate and what to do next.
+- Inconsistent style for capitalization, money formatting, terms etc.
+- Lack of effective voice and tone.
+- Grammar, spelling and punctuation errors.
+
+# User Flow Chart
+I started by sketching a user flow chart to help me understand and map out the key structure, content and different touchpoints in the user journey.
+
+#### ![Flow chart](../../../../assets/images/articles/handshake/3.png)
+
+# Onboarding
+I realized that there were no onboarding screens in the initial designs so I created these to give a simple overview and introduction to what the app does using a friendly, warm and professional tone of voice.
+
+### ![Onboarding](../../../../assets/images/articles/handshake/4.png)
+
+# Sign Up
+In the previous user flow, a first time user just went straight to filling in details about their project without creating an account first so I redesigned the process to include an account creation form so they can sign in easily when next they are using the app.
+
+<Carousel>
+  {
+    props.data.signUpImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+<div style={{ marginBottom: '75px' }} />
+
+# Ongoing Use
+The goal here was to ensure that the copy and general experience was as seamless and easy to use as possible for the user. The previous copy had typos, lacked clarity and was inconsistent in its style of capitalization and money formatting.
+
+# Client Ongoing Use
+The previous decision dialog was confusing as it allowed the client to already take the decision and send payment before asking if they wanted to cancel it. I rewrote the dialog headline as a question and the body text was rewritten so the client could see the decision they were about to take. The button text was also rewritten to properly seek confirmation and prevent the client from making an unintentional mistake.
+
+
+export const pageQuery = graphql`
+ {
+  signUpImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/sign-up"}}){
+    nodes{
+      name
+      childImageSharp{
+        fluid{
+            ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+ }
+`
