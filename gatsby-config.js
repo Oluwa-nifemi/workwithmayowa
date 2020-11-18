@@ -15,7 +15,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        backgroundColor: "transparent",
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -25,6 +30,9 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
+            options: {
+              backgroundColor: "transparent",
+            },
           },
         ],
       }
