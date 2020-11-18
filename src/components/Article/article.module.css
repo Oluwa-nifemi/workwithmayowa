@@ -1,5 +1,5 @@
 .layout{
-  padding: 0 8.6%;
+  padding: 0 8.6% 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,8 @@
   font-size: 30px;
   line-height: 44px;
   color: var(--dark-purple);
+  width: 100%;
+  text-align: center;
 }
 
 .articleText{
@@ -24,4 +26,44 @@
   line-height: 25px;
   color: var(--dark-purple);
   margin-bottom: 75px;
+  width: 100%;
+  padding: 0 22.85%;
+}
+
+
+.articleTextSmallMargin{
+  margin-bottom: 30px;
+}
+
+.layoutSmall .articleText{
+  padding: 0 18.75%;
+}
+
+.articleList{
+  width: 100%;
+  padding: 0 22.85%;
+  color: var(--dark-purple);
+  list-style-type: none;
+  margin-bottom: 75px;
+}
+
+.articleListItem{
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+.articleImageFullWidth,
+.articleImageNormalWidth{
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+.articleImageFullWidth :global(.gatsby-resp-image-wrapper){
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.articleImageNormalWidth :global(.gatsby-resp-image-wrapper){
+  width: 100%;
 }
