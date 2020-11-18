@@ -87,3 +87,7 @@
 .articleCarouselItem :global(.gatsby-image-wrapper){
   max-width: 100%;
 }
+
+.articleBackLink{
+  align-self: flex-start;
+}

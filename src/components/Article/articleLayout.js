@@ -8,6 +8,7 @@ import ArticleText, { ArticleTextSmall } from "./articleText"
 import Carousel from "../Carousel"
 import { ArticleList, ArticleListItem } from "./articleList"
 import { ArticleImageFull, ArticleImageNormal } from "./articleImage"
+import BackLink from "../BackLink"
 
 const ArticleLayout = ({ children, pathContext }) => {
   const small = pathContext.frontmatter.small
@@ -37,6 +38,9 @@ const ArticleLayout = ({ children, pathContext }) => {
         pageTitle={pathContext.frontmatter.title}
       >
         {children}
+        <BackLink to='/work/writing' className={classes.articleBackLink}>
+          Back to Writing
+        </BackLink>
       </Layout>
     </MDXProvider>
   )
