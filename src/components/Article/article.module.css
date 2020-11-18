@@ -5,10 +5,6 @@
   align-items: center;
 }
 
-.layoutSmall{
-  padding: 0 25%;
-}
-
 .articleHeader{
   font-family: var(--oswald);
   font-weight: normal;
@@ -33,6 +29,11 @@
 
 .articleTextSmallMargin{
   margin-bottom: 30px;
+}
+
+.articleTextUnderlined{
+  text-decoration: underline;
+  margin-bottom: 0;
 }
 
 .layoutSmall .articleText{
@@ -68,6 +69,10 @@
   width: 100%;
 }
 
+.layoutSmall .articleImageFullWidth{
+  padding: 0 18.75%;
+}
+
 .articleCarouselItem{
   display: flex;
   flex-direction: column;
@@ -90,4 +95,12 @@
 
 .articleBackLink{
   align-self: flex-start;
+}
+
+:global(.three-images){
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  grid-column-gap: 20px;
+  width: 100%;
 }
