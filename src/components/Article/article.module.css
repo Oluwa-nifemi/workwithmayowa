@@ -1,0 +1,27 @@
+.layout{
+  padding: 0 8.6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layoutSmall{
+  padding: 0 25%;
+}
+
+.articleHeader{
+  font-family: var(--oswald);
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--dark-purple);
+}
+
+.articleText{
+  font-family: var(--mulish);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--dark-purple);
+  margin-bottom: 75px;
+}
