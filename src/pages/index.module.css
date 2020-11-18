@@ -18,9 +18,19 @@
 
 .introLink {
   font-weight: 500;
-  text-decoration: underline;
   font-size: 55px;
   line-height: 82px;
+  position: relative;
+  font-family: var(--oswald);
+}
+
+.introLinkLine{
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 5px;
+  background: white;
+  display: inline-flex;
 }
 
 .imageContainer{

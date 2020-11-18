@@ -1,11 +1,22 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import classes from './index.module.css';
-import {graphql, Link} from 'gatsby';
-import Img from 'gatsby-image';
+import React, { useEffect, useState } from "react"
+import Layout from "../components/Layout"
+import classes from "./index.module.css"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import { motion } from "framer-motion"
 
 const Index = ({ data }) => {
+  const [width, setWidth] = useState({})
+
+  useEffect(() => {
+    //Delay for fonts to load
+    setTimeout(() => {
+      setWidth({
+        width: '100%'
+      })
+    }, 500)
+  }, [])
+
   return (
     <Layout
       isPageHeight
@@ -17,12 +28,39 @@ const Index = ({ data }) => {
         <Link
           to='/works/writer'
           className={classes.introLink}
-        >Writer
+        >
+          Writer
+          <motion.div
+            initial={{
+              width: '0'
+            }}
+            animate={width}
+            transition={{
+              duration: 0.3,
+              type: "spring",
+              stiffness: 100
+            }}
+            className={classes.introLinkLine}
+          />
         </Link> & {' '}
         <Link
           to='/works/designer'
           className={classes.introLink}
-        >Designer
+        >
+          Designer
+          <motion.div
+            initial={{
+              width: '0'
+            }}
+            animate={width}
+            transition={{
+              delay: 0.5,
+              duration: 0.3,
+              type: "spring",
+              stiffness: 100
+            }}
+            className={classes.introLinkLine}
+          />
         </Link>.
       </h1>
       <div className={classes.imageContainer}>
