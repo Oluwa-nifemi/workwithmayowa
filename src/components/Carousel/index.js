@@ -44,6 +44,7 @@ const Carousel = ({ children }) => {
           exit='hide'
           variants={variants}
           transition={{duration: 0.6}}
+          className={classes.item}
         >
           {childrenArray[imageIndex]}
         </motion.div>

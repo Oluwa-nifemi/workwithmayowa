@@ -10,6 +10,8 @@
 
 .item{
   flex-grow: 1;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .carouselButton{
