@@ -67,3 +67,23 @@
 .articleImageNormalWidth :global(.gatsby-resp-image-wrapper){
   width: 100%;
 }
+
+.articleCarouselItem{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+}
+
+.articleCarouselItemText{
+  font-family: var(--mulish);
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.8;
+  color: var(--dark-purple);
+}
+
+.articleCarouselItem :global(.gatsby-image-wrapper){
+  max-width: 100%;
+}
