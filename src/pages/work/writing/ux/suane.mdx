@@ -4,6 +4,7 @@ small: false
 ---
 
 
+
 import { graphql } from "gatsby"
 import Carousel from "../../../../components/Carousel"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -66,7 +67,7 @@ export const pageQuery = graphql`
       nodes{
         name
         childImageSharp{
-          fluid{
+          fluid(quality: 80){
               ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -76,7 +77,7 @@ export const pageQuery = graphql`
       nodes{
         name
         childImageSharp{
-        fluid{
+        fluid(quality: 80){
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -86,7 +87,7 @@ export const pageQuery = graphql`
     nodes{
       name
       childImageSharp{
-      fluid{
+      fluid(quality: 80){
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -4,6 +4,7 @@ small: true
 ---
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { convertTo3By3Array } from "../../../../util/functions"
 import Img from "gatsby-image"
@@ -226,7 +227,7 @@ export const pageQuery = graphql`
       nodes{
         name
         childImageSharp{
-          fluid{
+          fluid(quality: 80){
               ...GatsbyImageSharpFluid_withWebp
           }
         }
