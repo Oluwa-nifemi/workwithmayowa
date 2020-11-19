@@ -6,6 +6,7 @@ small: false
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -117,7 +118,7 @@ The previous messaging screens were complex and confusing. I redesigned it to ma
 
 export const pageQuery = graphql`
  {
-  signUpImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/sign-up"}}){
+  signUpImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/sign-up"}}, sort: {fields: name, order: ASC}){
       nodes{
         name
         childImageSharp{
@@ -127,7 +128,7 @@ export const pageQuery = graphql`
         }
       }
     }
-  ongoingImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/ongoing"}}){
+  ongoingImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/ongoing"}}, sort: {fields: name, order: ASC}){
       nodes{
         name
         childImageSharp{
@@ -137,7 +138,7 @@ export const pageQuery = graphql`
         }
       }
     }
-  freelancerImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/freelancer"}}){
+  freelancerImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/freelancer"}}, sort: {fields: name, order: ASC}){
     nodes{
       name
       childImageSharp{
@@ -147,7 +148,7 @@ export const pageQuery = graphql`
       }
     }
   }
-  messagesImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/messaging"}}){
+  messagesImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/messaging"}}, sort: {fields: name, order: ASC}){
     nodes{
         name
         childImageSharp{
