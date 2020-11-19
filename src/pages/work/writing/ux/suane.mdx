@@ -1,0 +1,96 @@
+---
+title: Suane Digitals Website
+small: false
+---
+
+
+import { graphql } from "gatsby"
+import Carousel from "../../../../components/Carousel"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+
+## Suane Digitals is a creative agency that works with new businesses to increase sales through brand positioning and design. Their website was in need of a copy overhaul as it didn’t properly represent them and what they did.
+
+Their brand voice is bold and confident, they believe in helping young brands build a strong identity so I ensured this tone and voice was reflected in the website copy.
+
+# Homepage
+
+The former copy on the homepage wasn’t clear so I rewrote it to be more direct yet interesting enough for whoever was seeing it.
+
+<Carousel>
+  {
+    props.data.landingImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+
+# Services
+
+The “Services” section also didn't have accurate descriptions so I edited each service description.
+
+<Carousel>
+  {
+    props.data.servicesImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+
+# About
+
+The “About” section was rewritten to clearly show what Suane Digitals represented.
+
+<Carousel>
+  {
+    props.data.aboutImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={node.name}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
+      />
+    ))
+  }
+</Carousel>
+
+export const pageQuery = graphql`
+ {
+  aboutImages: allFile(filter: {relativeDirectory: {eq:"articles/suane/about"}}, sort: {fields: name, order: DESC}){
+      nodes{
+        name
+        childImageSharp{
+          fluid{
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  landingImages: allFile(filter: {relativeDirectory: {eq:"articles/suane/landing"}}, sort: {fields: name, order: DESC}){
+      nodes{
+        name
+        childImageSharp{
+        fluid{
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  servicesImages: allFile(filter: {relativeDirectory: {eq:"articles/suane/services"}}, sort: {fields: name, order: DESC}){
+    nodes{
+      name
+      childImageSharp{
+      fluid{
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+ }
+`
