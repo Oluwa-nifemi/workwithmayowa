@@ -8,13 +8,14 @@ small: false
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
 
 This case study is from the final project of my UX Writing course on UXWC. We were to work on a fictional app called “Handshake”. The project provided already designed screens for us to review and correct the UI texts. After submitting the project and completing the course, I decided to redesign the UI.
 
-### ![Handshake Preview](../../../../assets/images/articles/handshake/1.png)
+### ![Handshake Preview](../../../../assets/images/articles/handshake/1.jpg)
 
 # Background
 
@@ -45,7 +46,7 @@ I started by sketching a user flow chart to help me understand and map out the k
 # Onboarding
 I realized that there were no onboarding screens in the initial designs so I created these to give a simple overview and introduction to what the app does using a friendly, warm and professional tone of voice.
 
-### ![Onboarding](../../../../assets/images/articles/handshake/4.png)
+### ![Onboarding](../../../../assets/images/articles/handshake/4.jpg)
 
 # Sign Up
 In the previous user flow, a first time user just went straight to filling in details about their project without creating an account first so I redesigned the process to include an account creation form so they can sign in easily when next they are using the app.
@@ -94,6 +95,7 @@ The confirmation dialogue text also needed to be rewritten. The headline and bod
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
+        maxWidth='750px'
       />
     ))
   }
@@ -102,17 +104,12 @@ The confirmation dialogue text also needed to be rewritten. The headline and bod
 # Messaging
 The previous messaging screens were complex and confusing. I redesigned it to make it simpler and more straightforward to use.
 
-<Carousel>
-  {
-    props.data.messagesImages.nodes.map(node => (
-      <ArticleCarouselItem
-        name={node.name}
-        fluid={node.childImageSharp.fluid}
-        maxWidth='750px'
-      />
-    ))
-  }
-</Carousel>
+<ArticleCarouselItem
+  name='Messaging Screens'
+  fluid={props.data.messagesImage?.childImageSharp.fluid}
+  maxWidth='750px'
+/>
+<div style={{marginBottom: 75}}/>
 
 # Next Steps: User Testing
 ## It’s important to test the new designs and updated copy with users so as to measure its usability and ensure that it delivers an all round great user experience.
@@ -149,16 +146,13 @@ export const pageQuery = graphql`
       }
     }
   }
-  messagesImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/messaging"}}, sort: {fields: name, order: ASC}){
-    nodes{
-        name
-        childImageSharp{
+  messagesImage: file(relativePath: {eq:"articles/handshake/5.jpg"}){
+      childImageSharp{
           fluid(quality: 80){
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
-    }
+      }
  }
 `
 
