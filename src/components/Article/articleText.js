@@ -2,14 +2,14 @@ import React from "react"
 import classes from "./article.module.css"
 import { classNames } from "../../util/functions"
 
-const ArticleText = ({ children, smallMargin, underlined }) => {
+const ArticleText = ({ children, smallMargin, bold }) => {
   return (
     <p
       className={
         classNames(
           classes.articleText,
           smallMargin && classes.articleTextSmallMargin,
-          underlined && classes.articleTextUnderlined
+          bold && classes.articleTextBold
         )
       }
     >
@@ -20,6 +20,6 @@ const ArticleText = ({ children, smallMargin, underlined }) => {
 
 export const ArticleTextSmall = (props) => <ArticleText {...props} smallMargin />
 
-export const ArticleTextUnderlined = (props) => <ArticleText {...props} underlined />
+export const ArticleTextBold = (props) => <ArticleText {...props} bold />
 
 export default ArticleText

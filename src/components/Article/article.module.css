@@ -31,8 +31,8 @@
   margin-bottom: 30px;
 }
 
-.articleTextUnderlined{
-  text-decoration: underline;
+.articleTextBold{
+  font-weight: bold;
   margin-bottom: 0;
 }
 

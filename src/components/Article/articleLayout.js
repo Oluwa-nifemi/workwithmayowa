@@ -4,7 +4,7 @@ import { classNames } from "../../util/functions"
 import Layout from "../Layout"
 import { MDXProvider } from "@mdx-js/react"
 import ArticleHeader from "./articleHeader"
-import ArticleText, { ArticleTextSmall, ArticleTextUnderlined } from "./articleText"
+import ArticleText, { ArticleTextBold, ArticleTextSmall } from "./articleText"
 import Carousel from "../Carousel"
 import { ArticleList, ArticleListItem } from "./articleList"
 import { ArticleImageFull, ArticleImageNormal } from "./articleImage"
@@ -20,7 +20,7 @@ const ArticleLayout = ({ children, pathContext }) => {
         h2: ArticleTextSmall,
         h3: ArticleImageFull,
         h4: ArticleImageNormal,
-        h5: ArticleTextUnderlined,
+        h5: ArticleTextBold,
         p: ArticleText,
         ul: ArticleList,
         li: ArticleListItem
