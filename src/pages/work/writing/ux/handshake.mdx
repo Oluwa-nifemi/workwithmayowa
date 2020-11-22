@@ -9,6 +9,7 @@ small: false
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -57,7 +58,7 @@ In the previous user flow, a first time user just went straight to filling in de
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='750px'
+        maxWidth='50vw'
       />
     ))
   }
@@ -75,7 +76,7 @@ The previous decision dialog was confusing as it allowed the client to already t
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='750px'
+        maxWidth='50vw'
       />
     ))
   }
@@ -95,7 +96,7 @@ The confirmation dialogue text also needed to be rewritten. The headline and bod
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='750px'
+        maxWidth='50vw'
       />
     ))
   }
@@ -107,7 +108,7 @@ The previous messaging screens were complex and confusing. I redesigned it to ma
 <ArticleCarouselItem
   name='Messaging Screens'
   fluid={props.data.messagesImage?.childImageSharp.fluid}
-  maxWidth='750px'
+  maxWidth='50vw'
 />
 <div style={{marginBottom: 75}}/>
 
