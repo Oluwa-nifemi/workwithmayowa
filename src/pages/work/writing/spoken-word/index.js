@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../../../components/Layout"
 import classes from "../gridLayout.module.css"
 import BackLink from "../../../../components/BackLink"
-import ReactPlayer from "react-player"
+import Card from "../../../../components/Card"
 
 
 const items = [
@@ -37,11 +37,8 @@ const SpokenWord = () => {
               <h3 className={classes.itemName}>
                 {title}
               </h3>
-              <ReactPlayer
-                url={embedLink}
-                light
-                width='100%'
-                height='460px'
+              <Card
+                videoUrl={embedLink}
               />
             </div>
           ))
