@@ -22,8 +22,8 @@
   font-family: var(--oswald);
   font-style: normal;
   font-weight: normal;
-  font-size: 26px;
-  line-height: 39px;
+  font-size: 2.6rem;
+  line-height: 3.9rem;
   display: flex;
   align-items: center;
   color: var(--dark-purple);

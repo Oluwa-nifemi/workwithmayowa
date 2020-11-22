@@ -9,17 +9,17 @@
 .intro {
   font-family: var(--oswald);
   color: var(--dark-purple);
-  font-size: 50px;
-  line-height: 74px;
+  font-size: 5rem;
+  line-height: 7.4rem;
   font-weight: 400;
   letter-spacing: 0.3px;
-  max-width: 550px;
+  max-width: 55rem;
 }
 
 .introLink {
   font-weight: 500;
-  font-size: 55px;
-  line-height: 82px;
+  font-size: 5.5rem;
+  line-height: 8.2rem;
   position: relative;
   font-family: var(--oswald);
 }
@@ -38,12 +38,13 @@
   height: 420px;
   display: flex;
   align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .imageBg {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   background: rgba(192, 155, 216, 0.3);
   border-radius: 10px 0 0 0;
   width: 360px;
@@ -58,4 +59,26 @@
   transition: 300ms;
   border-radius: 10px 0 0 0;
   width: 360px;
+}
+
+@media (min-width: 1600px) {
+  .imageContainer{
+    height: 400px;
+  }
+
+  .image,
+  .imageBg{
+    width: 400px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .imageContainer{
+    height: 550px;
+  }
+
+  .image,
+  .imageBg{
+    width: 550px;
+  }
 }

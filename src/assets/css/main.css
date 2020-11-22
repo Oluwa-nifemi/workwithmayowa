@@ -19,13 +19,28 @@ a {
   color: inherit;
 }
 
+html { font-size: 62.5%; } /* Essentially 10px */
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 1.6rem; /* Essentially 16px */
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  html{
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 2000px) {
+  html{
+    font-size: 120%;
+  }
 }

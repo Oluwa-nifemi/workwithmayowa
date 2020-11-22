@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
-import classes from './header.module.css';
-import logo from '../../assets/images/logo.svg';
-import {Link} from 'gatsby';
-import {classNames} from '../../util/functions';
-import {motion} from 'framer-motion';
+import React, { useState } from "react"
+import classes from "./header.module.css"
+import logo from "../../assets/images/logo.svg"
+import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 const Header = () => {
   return (
@@ -14,6 +13,7 @@ const Header = () => {
         <img
           src={logo}
           alt="Logo"
+          className={classes.navLogo}
         />
       </Link>
       <div className={classes.navLinks}>

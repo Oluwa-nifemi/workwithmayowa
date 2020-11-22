@@ -8,8 +8,8 @@
 .articleHeader{
   font-family: var(--oswald);
   font-weight: normal;
-  font-size: 30px;
-  line-height: 44px;
+  font-size: 3rem;
+  line-height: 4.4rem;
   color: var(--dark-purple);
   width: 100%;
   padding: 0 22.85%;
@@ -18,8 +18,8 @@
 .articleText{
   font-family: var(--mulish);
   font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   color: var(--dark-purple);
   margin-bottom: 75px;
   width: 100%;
@@ -84,7 +84,8 @@
 .articleCarouselItemText{
   font-family: var(--mulish);
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
   text-align: center;
   opacity: 0.8;
   color: var(--dark-purple);

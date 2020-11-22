@@ -18,16 +18,16 @@
 .itemName{
   font-family: var(--oswald);
   font-weight: normal;
-  font-size: 30px;
-  line-height: 44px;
+  font-size: 3rem;
+  line-height: 4.4rem;
   color: var(--dark-purple);
 }
 
 .itemDescription{
   font-family: var(--mulish);
   font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   color: var(--purple-2);
 }
 

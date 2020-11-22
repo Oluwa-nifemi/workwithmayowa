@@ -10,8 +10,8 @@
   font-family: var(--oswald);
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 44px;
+  font-size: 3rem;
+  line-height: 4.4rem;
   display: flex;
   align-items: center;
   color: var(--dark-purple);

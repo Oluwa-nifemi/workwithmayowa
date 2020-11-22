@@ -11,10 +11,14 @@
   display: inline-flex;
 }
 
+.navLogo{
+  min-width: 12rem;
+}
+
 .navLink, .navDropdownButton{
   font-family: var(--oswald);
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3rem;
   color: var(--dark-purple);
   position: relative;
 }
@@ -49,7 +53,7 @@
 
 .navDropdownItem{
   font-family: var(--oswald);
-  font-size: 20px;
+  font-size: 2rem;
   color: var(--dark-purple);
   padding: 9px 21px;
 }
