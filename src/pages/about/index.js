@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import {graphql} from 'gatsby';
-import classes from './about.module.css';
-import Img from 'gatsby-image';
+import React from "react"
+import Layout from "../../components/Layout"
+import { graphql } from "gatsby"
+import classes from "./about.module.css"
+import Img from "gatsby-image"
 
 const About = ({ data }) => {
   return (
@@ -19,7 +19,8 @@ const About = ({ data }) => {
         Design is my second love, my faithful side chic. My interest in design started from watching my dad work as a graphic designer. I started watching tutorials on YouTube and taking online courses to understand design. My friends were my initial test subjects, I designed flyers and logos for brands they wanted to build. I stumbled upon Design Thinking and this refined how I saw design  and its ability to solve real problems and make people’s lives better.
       </p>
       <p className={classes.text}>
-        My understanding of writing and design helps me collaborate effectively in teams whether in advertising or UX. You can view my resume here to see where I’ve worked so far.
+        My understanding of writing and design helps me collaborate effectively in teams whether in advertising or UX. You can view my resume <a
+        href="https://drive.google.com/file/d/1mDREzzqL1r64bnpsZeRNzeXiokDQuT6I/view?usp=sharing" target="_blank" rel='noreferrer'>here</a> to see where I’ve worked so far.
       </p>
       <p className={classes.text}>
         Think I’ll make a good fit for your next project?

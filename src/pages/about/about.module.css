@@ -4,7 +4,7 @@
 
 .image{
   width: 80%;
-  max-width: 470px;
+  max-width: 47rem;
   border-radius: 10px;
   margin: 0 auto 35px;
 }
@@ -15,7 +15,11 @@
   line-height: 2.5rem;
   margin-bottom: 30px;
   color: var(--dark-purple);
-  max-width: 950px;
+  max-width: 95rem;
+}
+
+.text a{
+  text-decoration: underline;
 }
 
 .talkLink{
