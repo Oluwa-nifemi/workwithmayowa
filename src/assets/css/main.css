@@ -19,7 +19,7 @@ a {
   color: inherit;
 }
 
-html { font-size: 62.5%; } /* Essentially 10px */
+html { font-size: 10px; } /* Essentially 10px */
 
 body {
   margin: 0;
@@ -35,12 +35,12 @@ body {
 
 @media (min-width: 1600px) {
   html{
-    font-size: 80%;
+    font-size: 13px;
   }
 }
 
 @media (min-width: 2000px) {
   html{
-    font-size: 120%;
+    font-size: 19px;
   }
 }

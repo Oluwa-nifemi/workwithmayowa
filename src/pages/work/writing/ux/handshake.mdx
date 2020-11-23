@@ -11,6 +11,7 @@ small: false
 
 
 
+
 import { freelancerMapping, setupMapping } from "../../../../data/articles/handshake"
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
@@ -106,7 +107,6 @@ The previous decision dialog was confusing as it allowed the client to already t
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='50vw'
       />
     ))
   }
