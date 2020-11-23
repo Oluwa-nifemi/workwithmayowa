@@ -12,6 +12,6 @@ export const ArticleList = ({children}) => {
 
 export const ArticleListItem = ({children}) => (
   <li className={classNames(classes.articleListItem, classes.articleText)}>
-    - {children}
+    {children}
   </li>
 )
