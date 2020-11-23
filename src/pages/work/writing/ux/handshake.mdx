@@ -10,6 +10,7 @@ small: false
 
 
 
+import { freelancerMapping, setupMapping } from "./data/handshake"
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -39,6 +40,15 @@ Kelly is a web development graduate who recently started freelancing to save mon
 - Lack of effective voice and tone.
 - Grammar, spelling and punctuation errors.
 
+# What I Did
+
+## This is a summary of the things I did to give “Handshake” a better and more seamless experience.
+
+- Developed new copy and edited existing copy with a warm, friendly and human tone of voice.
+- Included hint text and microcopy where necessary for clarity to help the user have a better experience.
+- Redesigned the UI and some parts of the user flow.
+- Maintained a consistent style for capitalization, money formatting and terms used.
+
 # User Flow Chart
 I started by sketching a user flow chart to help me understand and map out the key structure, content and different touchpoints in the user journey.
 
@@ -64,6 +74,25 @@ In the previous user flow, a first time user just went straight to filling in de
   }
 </Carousel>
 
+# Set Up
+## This is the stage where the user fills in details of their project. I edited the copy for consistency of terms and clarity while still ensuring it maintained the right tone of voice. I also included some hint text and microcopy to help the users understand the right information to fill.
+
+## The previous design had used the term “1099 Workers” was changed to “Freelancers” as my research had shown that it was the more commonly used term by users.
+
+In the previous design, after inviting the freelancer/client, the success modal didn’t clearly state what had happened and what to expect so I edited the copy to help the users understand and know what to do next.
+
+<Carousel>
+  {
+    props.data.setupImages.nodes.map(node => (
+      <ArticleCarouselItem
+        name={setupMapping[node.name]}
+        fluid={node.childImageSharp.fluid}
+        maxWidth='50vw'
+      />
+    ))
+  }
+</Carousel>
+
 # Ongoing Use
 The goal here was to ensure that the copy and general experience was as seamless and easy to use as possible for the user. The previous copy had typos, lacked clarity and was inconsistent in its style of capitalization and money formatting.
 
@@ -82,10 +111,8 @@ The previous decision dialog was confusing as it allowed the client to already t
   }
 </Carousel>
 
-# Client Ongoing Use
-The previous decision dialog was confusing as it allowed the client to already take the decision and send payment before asking if they wanted to cancel it. I rewrote the dialog headline as a question and the body text was rewritten so the client could see the decision they were about to take. The button text was also rewritten to properly seek confirmation and prevent the client from making an unintentional mistake.
-
 # Freelancer Ongoing Use
+
 ## For the freelancer ongoing use, the previous design hid the project description in a tool tip and this was important information so it was added to the main screen in the redesigned version.
 
 The confirmation dialogue text also needed to be rewritten. The headline and body text was edited to be more concise. The previous button text was “Cancel” and “Yes”, this was a problem as it was unclear what would happen if the freelancer clicks either of the buttons. This was rewritten so the freelancer could be sure of what action they were taking when they clicked any of the buttons.
@@ -94,7 +121,7 @@ The confirmation dialogue text also needed to be rewritten. The headline and bod
   {
     props.data.freelancerImages.nodes.map(node => (
       <ArticleCarouselItem
-        name={node.name}
+        name={freelancerMapping[node.name]}
         fluid={node.childImageSharp.fluid}
         maxWidth='50vw'
       />
@@ -138,6 +165,16 @@ export const pageQuery = graphql`
       }
     }
   freelancerImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/freelancer"}}, sort: {fields: name, order: ASC}){
+    nodes{
+      name
+      childImageSharp{
+      fluid(quality: 80){
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+  setupImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/setup"}}, sort: {fields: name, order: ASC}){
     nodes{
       name
       childImageSharp{
