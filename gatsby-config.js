@@ -33,9 +33,9 @@ module.exports = {
             options: {
               backgroundColor: "transparent",
               quality: 100,
-              withWebp: {
-                quality: 100
-              }
+              // withWebp: {
+              //   quality: 100
+              // }
             },
           },
         ],
