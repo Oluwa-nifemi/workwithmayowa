@@ -19,6 +19,8 @@ module.exports = {
       resolve: `gatsby-remark-images`,
       options: {
         backgroundColor: "transparent",
+        quality: 100,
+        maxWidth: 4000
       },
     },
     {
@@ -33,6 +35,7 @@ module.exports = {
             options: {
               backgroundColor: "transparent",
               quality: 100,
+              maxWidth: 4000
               // withWebp: {
               //   quality: 100
               // }
