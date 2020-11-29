@@ -26,7 +26,7 @@ const Index = ({ data }) => {
       <h1 className={classes.intro}>
         Hello, I’m Mayowa Adeyemi, a {' '}
         <Link
-          to='/works/writer'
+          to='/work/writing'
           className={classes.introLink}
         >
           Writer
@@ -44,7 +44,7 @@ const Index = ({ data }) => {
           />
         </Link> & {' '}
         <Link
-          to='/works/designer'
+          to='/work/design'
           className={classes.introLink}
         >
           Designer
