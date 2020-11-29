@@ -1,0 +1,111 @@
+---
+title: Print
+small: false
+type: Design
+---
+
+
+
+
+
+
+
+
+import Carousel from "../../../../components/Carousel"
+import { graphql } from "gatsby"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+
+# Addax Petroleum 2020 Calendar
+
+## I designed a sample calendar for Addax Petroleum. The theme of the design was “Historical Personalities” so I used some significant figures in Nigerian history. My style and colour choices were deliberate to make the design look vintage.
+
+<Carousel>
+  {
+    props.data.addax2020.nodes.map(image => (
+      <ArticleCarouselItem
+        fluid={image.childImageSharp.fluid}
+      />
+    ))
+  }
+</Carousel>
+
+# Addax Petroleum Christmas Card
+
+## These are some sample Christmas card designs I did for Addax Petroleum.
+
+<Carousel>
+  {
+    props.data.addaxChristmas.nodes.map(image => (
+      <ArticleCarouselItem
+        fluid={image.childImageSharp.fluid}
+      />
+    ))
+  }
+</Carousel>
+
+# Joshua David Business Card
+
+## Joshua David is a conductor, musicologist and instrumentalist. I did different business card design options for him that creatively capture what he does.
+
+<Carousel>
+  {
+    props.data.joshuaDavid.nodes.map(image => (
+      <ArticleCarouselItem
+        fluid={image.childImageSharp.fluid}
+      />
+    ))
+  }
+</Carousel>
+
+
+export const pageQuery = graphql`
+ {
+  addax2020: allFile(filter: {relativeDirectory: {eq:"digital/print/addax-2020"}}, sort: {fields: name, order: ASC}){
+      nodes{
+        name
+        childImageSharp{
+          fluid(quality: 80, maxWidth: 1800){
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  addaxChristmas: allFile(filter: {relativeDirectory: {eq:"digital/print/addax-christmas"}}, sort: {fields: name, order: ASC}){
+      nodes{
+        name
+        childImageSharp{
+        fluid(quality: 80, maxWidth: 1800){
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  joshuaDavid: allFile(filter: {relativeDirectory: {eq:"digital/print/joshua-david"}}, sort: {fields: name, order: ASC}){
+    nodes{
+      name
+      childImageSharp{
+      fluid(quality: 80, maxWidth: 1800){
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+  setupImages: allFile(filter: {relativeDirectory: {eq:"articles/handshake/setup"}}, sort: {fields: name, order: ASC}){
+    nodes{
+      name
+      childImageSharp{
+      fluid(quality: 80, maxWidth: 1800){
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+  messagesImage: file(relativePath: {eq:"articles/handshake/5.jpg"}){
+      childImageSharp{
+          fluid(quality: 80, maxWidth: 1800){
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+ }
+`
