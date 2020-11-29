@@ -1,0 +1,25 @@
+.section{
+  padding: 0 8.6% 75px;
+}
+
+.section + .section{
+  padding-top: 75px;
+}
+
+.sectionTitle{
+  font-family: var(--oswald);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 4.4rem;
+  display: flex;
+  align-items: center;
+  color: var(--dark-purple);
+  margin-bottom: 25px;
+}
+
+.sectionCards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 55px;
+}
