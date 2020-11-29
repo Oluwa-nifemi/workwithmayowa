@@ -12,6 +12,7 @@ import BackLink from "../BackLink"
 
 const ArticleLayout = ({ children, pathContext }) => {
   const small = pathContext.frontmatter.small
+  const type = pathContext.frontmatter.type
 
   return (
     <MDXProvider
@@ -39,8 +40,8 @@ const ArticleLayout = ({ children, pathContext }) => {
         pageTitle={pathContext.frontmatter.title}
       >
         {children}
-        <BackLink to='/work/writing' className={classes.articleBackLink}>
-          Back to Writing
+        <BackLink to={`/work/${type.toLowerCase()}`} className={classes.articleBackLink}>
+          Back to {type}
         </BackLink>
       </Layout>
     </MDXProvider>
