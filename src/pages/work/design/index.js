@@ -9,17 +9,17 @@ const sections = [
       {
         imageId: "melange",
         title: "Melange",
-        to: "/logos/melange"
+        to: "/work/design/logos/melange"
       },
       {
         imageId: "tinkerman",
         title: "Tinkerman",
-        to: "/logos/tinkerman"
+        to: "/work/design/logos/tinkerman"
       },
       {
         imageId: "chuko",
         title: "Chuko’s Food & Spices",
-        to: "/logos/chuko"
+        to: "/work/design/logos/chuko"
       },
     ]
   },
@@ -29,23 +29,23 @@ const sections = [
       {
         imageId: "flyers",
         title: "Digital Flyers",
-        to: "/others/flyers"
+        to: "/work/design/others/flyers"
       },
       {
         imageId: "print",
         title: "Print",
-        to: "/others/print"
+        to: "/work/design/others/print"
       },
       {
         imageId: "daily-ui",
         title: "Daily UI Challenge",
-        to: "/others/daily-ui"
+        to: "/work/design/others/daily-ui"
       }
     ]
   }
 ]
 
-const Writing = ({ data }) => {
+const Design = ({ data }) => {
   return (
     <WritingDesignLayout
       data={data}
@@ -55,7 +55,7 @@ const Writing = ({ data }) => {
   )
 }
 
-export default Writing
+export default Design
 
 export const query = graphql`
     {
