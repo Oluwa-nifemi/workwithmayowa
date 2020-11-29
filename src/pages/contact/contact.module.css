@@ -1,0 +1,89 @@
+.main{
+  padding: 75px 22.85% 85px;
+}
+
+.header{
+  font-family: var(--oswald);
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--dark-purple);
+}
+
+.description{
+  font-family: var(--mulish);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--dark-purple);
+  margin-bottom: 75px;
+}
+
+.description a{
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.formRow{
+  width: 100%;
+}
+
+.formLabel{
+  font-family: var(--mulish);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #6A2C70;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.formInput{
+  border: 1px solid var(--dark-purple);
+  border-radius: 3px;
+  width: 100%;
+  background-color: transparent;
+  color: var(--dark-purple);
+  font-size: 16px;
+  height: 44px;
+  transition: 300ms;
+  padding-left: 10px;
+}
+
+.formInput:focus{
+  outline: none;
+  box-shadow: 0 0 10px var(--purple);
+}
+
+.formTextArea{
+  height: 170px;
+  resize: none;
+  padding: 10px
+}
+
+.formSendButton{
+  border: none;
+  padding: 10px;
+  background: #6A2C70;
+  border-radius: 3px;
+  font-family: var(--mulish);
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+  width: fit-content;
+}
+
+.formShy{
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--dark-purple);
+  font-family: var(--mulish);
+}
