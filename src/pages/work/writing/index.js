@@ -1,8 +1,6 @@
-import React, { useMemo } from "react"
-import Layout from "../../../components/Layout"
+import React from "react"
 import { graphql } from "gatsby"
-import classes from "./writing.module.css"
-import Card from "../../../components/Card"
+import WritingDesignLayout from "../../../layout/writing-design-layout"
 
 const sections = [
   {
@@ -63,41 +61,12 @@ const sections = [
 ]
 
 const Writing = ({ data }) => {
-  const images = useMemo(() => {
-    const nodes = data.allFile.nodes
-
-    return nodes.reduce((images, image) => {
-      return {
-        ...images,
-        [image.name]: image.childImageSharp.fluid
-      }
-    }, {})
-
-  }, [data.allFile.nodes])
-
   return (
-    <Layout pageTitle='Writing'>
-      {
-        sections.map(({ title, items }) => (
-          <div className={classes.section}>
-            <h3 className={classes.sectionTitle}>
-              {title}
-            </h3>
-            <div className={classes.sectionCards}>
-              {
-                items.map(({ imageId, title, to }) => (
-                  <Card
-                    fluid={images[imageId]}
-                    title={title}
-                    to={to}
-                  />
-                ))
-              }
-            </div>
-          </div>
-        ))
-      }
-    </Layout>
+    <WritingDesignLayout
+      data={data}
+      sections={sections}
+      pageTitle='Writing'
+    />
   )
 }
 
