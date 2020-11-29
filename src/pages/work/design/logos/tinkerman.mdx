@@ -1,0 +1,51 @@
+---
+title: Tinkerman Expressions
+small: true
+type: Design
+---
+
+
+
+
+
+
+
+
+import Carousel from "../../../../components/Carousel"
+import { graphql } from "gatsby"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+
+
+## Tinkerman Expressions is a creative director. He takes ideas and brings them to life using beautiful storytelling techniques.
+
+The objective was to create a logo that aptly represents his brand.
+
+### ![Melange](../../../../assets/images/digital/tinkerman/tinkerman.png)
+
+The minimalistic style was selected to keep the design timeless. The combination of the simple wordmark and swirl captures the feel of “Melange” being high class yet relaxed and fun.
+
+<Carousel>
+  {
+    props.data.carousel.nodes.map(image => (
+      <ArticleCarouselItem
+        fluid={image.childImageSharp.fluid}
+        maxWidth='50vw'
+      />
+    ))
+  }
+</Carousel>
+
+export const pageQuery = graphql`
+ {
+  carousel: allFile(filter: {relativeDirectory: {eq:"digital/tinkerman/carousel"}}, sort: {fields: name, order: ASC}){
+      nodes{
+        name
+        childImageSharp{
+          fluid(quality: 100){
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+ }
+`
