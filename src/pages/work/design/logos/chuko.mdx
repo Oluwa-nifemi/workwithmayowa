@@ -1,0 +1,53 @@
+---
+title: Tinkerman Expressions
+small: true
+type: Design
+---
+
+
+
+
+
+
+
+
+
+
+import Carousel from "../../../../components/Carousel"
+import { graphql } from "gatsby"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+
+
+## Chuko's Food and Spices is a brand that makes fast, affordable and tasty food. They also make spices for different sauces and soups.
+
+With Chuko's Food and Spices, it's more than just "eating", it’s delivering joy and happiness with every bite.
+
+### ![Melange](../../../../assets/images/digital/chuko/chuko.png)
+
+I worked on designing a logo that captured the playful and happy nature of the brand especially as their mission statement is “Smile on your face, joy in your tummy”
+
+<Carousel>
+  {
+    props.data.carousel.nodes.map(image => (
+      <ArticleCarouselItem
+        fluid={image.childImageSharp.fluid}
+        maxWidth='50vw'
+      />
+    ))
+  }
+</Carousel>
+
+export const pageQuery = graphql`
+ {
+  carousel: allFile(filter: {relativeDirectory: {eq:"digital/chuko/carousel"}}, sort: {fields: name, order: ASC}){
+      nodes{
+        name
+        childImageSharp{
+          fluid(quality: 100){
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+ }
+`
