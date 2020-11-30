@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import classes from "./header.module.css"
 import logo from "../../assets/images/logo.svg"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
+import { useHideOnClickOutside } from "../../hooks/useHideOnClickOutside"
 
 const Header = () => {
   return (
@@ -49,8 +50,19 @@ const WorkDropdown = () => {
 
   const toggleShow = () => setShow(prev => !prev)
 
+  const dropdownRef = useRef()
+
+  useHideOnClickOutside({
+    open: show,
+    onHide: toggleShow,
+    ref: dropdownRef
+  })
+
   return (
-    <div className={classes.navLink}>
+    <div
+      className={classes.navLink}
+      ref={dropdownRef}
+    >
       <button
         className={classes.navDropdownButton}
         onClick={toggleShow}
