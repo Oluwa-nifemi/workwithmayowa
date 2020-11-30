@@ -7,6 +7,7 @@ export const ArticleImage = ({ full, children }) => {
     <div
       className={
         classNames(
+          classes.articleImage,
           full ? classes.articleImageFullWidth : classes.articleImageNormalWidth
         )
       }
