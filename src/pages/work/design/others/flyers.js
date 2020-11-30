@@ -20,7 +20,7 @@ const Flyers = ({ data }) => {
 
   return (
     <ArticleLayout
-      pathContext={{
+      pageContext={{
         frontmatter: {
           small: true,
           type: "Design",

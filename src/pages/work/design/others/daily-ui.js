@@ -214,7 +214,7 @@ const DailyUi = ({ data }) => {
 
   return (
     <ArticleLayout
-      pathContext={{
+      pageContext={{
         frontmatter: {
           small: false,
           type: "Design",

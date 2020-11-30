@@ -10,9 +10,9 @@ import { ArticleList, ArticleListItem } from "./articleList"
 import { ArticleImageFull, ArticleImageNormal } from "./articleImage"
 import BackLink from "../BackLink"
 
-const ArticleLayout = ({ children, pathContext }) => {
-  const small = pathContext.frontmatter.small
-  const type = pathContext.frontmatter.type
+const ArticleLayout = ({ children, pageContext }) => {
+  const small = pageContext.frontmatter.small
+  const type = pageContext.frontmatter.type
 
   return (
     <MDXProvider
@@ -37,7 +37,7 @@ const ArticleLayout = ({ children, pathContext }) => {
             small && classes.layoutSmall
           )
         }
-        pageTitle={pathContext.frontmatter.title}
+        pageTitle={pageContext.frontmatter.title}
       >
         {children}
         <BackLink to={`/work/${type.toLowerCase()}`} className={classes.articleBackLink}>
