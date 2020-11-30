@@ -17,7 +17,7 @@ const variants = {
   }
 }
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, marginBottom = 75 }) => {
   const childrenArray = [].concat(children)
 
   const [page, setPage] = useState(0)
@@ -29,7 +29,12 @@ const Carousel = ({ children }) => {
   }
 
   return (
-    <div className={classes.carousel}>
+    <div
+      className={classes.carousel}
+      style={{
+        marginBottom: `${marginBottom}px`
+      }}
+    >
       <button
         className={classes.carouselButton}
         onClick={paginate(-1)}
