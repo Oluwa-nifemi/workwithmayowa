@@ -48,20 +48,20 @@
   padding: 0;
 }
 
-
 .articleImage{
-  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
   margin-bottom: 75px;
+  width: 100%;
 }
 
 .articleImageFullWidth{
   margin: 0 auto 75px;
-  padding: 0 16%;
+  max-width: 82.8%;
 }
 
 .articleImageFullWidth :global(.gatsby-resp-image-wrapper){
   width: 100%;
-  max-width: 100% !important;
 }
 
 .articleImageNormalWidth{
