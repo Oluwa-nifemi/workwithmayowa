@@ -8,6 +8,7 @@ type: Writing
 
 
 
+
 import { graphql } from "gatsby"
 import Carousel from "../../../../components/Carousel"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -26,7 +27,6 @@ The former copy on the homepage wasn’t clear so I rewrote it to be more direct
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='50vw'
       />
     ))
   }
@@ -42,7 +42,6 @@ The “Services” section also didn't have accurate descriptions so I edited ea
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='50vw'
       />
     ))
   }
@@ -58,7 +57,6 @@ The “About” section was rewritten to clearly show what Suane Digitals repres
       <ArticleCarouselItem
         name={node.name}
         fluid={node.childImageSharp.fluid}
-        maxWidth='50vw'
       />
     ))
   }
