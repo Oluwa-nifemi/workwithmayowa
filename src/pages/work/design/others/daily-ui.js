@@ -22,21 +22,21 @@ const days = [
   {
     key: 2,
     title: "Day 2",
-    description: "Design a credit card checkout form or page. The checkout design I did is for booking a movie ticket on a cinema website",
+    description: "Design a credit card checkout form or page. The checkout design I did is for booking a movie ticket on a cinema website.",
     carousel: true,
     count: 3
   },
   {
     key: 3,
     title: "Day 3",
-    description: "Design a landing page. I designed two landing page options for a photography portfolio website.",
+    description: "Design a landing page. I designed two landing page options for a photography portfolio website. ",
     carousel: true,
     count: 2
   },
   {
     key: 4,
     title: "Day 4",
-    description: "Design a calculator. I designed 2 types of calculators; a basic one for a smart watch and a currency converter calculator",
+    description: "Design a calculator. I designed 2 types of calculators; a basic one for a smart watch and a currency converter calculator.",
     carousel: true,
     count: 2,
     textWidth: true
@@ -78,7 +78,7 @@ const days = [
   {
     key: 11,
     title: "Day 11",
-    description: "Design a social share button/icon and be mindful of the size, imagery, placement, and purpose for sharing.",
+    description: "Design a Flash Message with both the outcome for an error and success. I played around with this challenge and used a popular meme and joke.",
     textWidth: true
   },
   {
@@ -91,18 +91,18 @@ const days = [
   {
     key: 13,
     title: "Day 13",
-    description: "Design a social share button/icon and be mindful of the size, imagery, placement, and purpose for sharing."
+    description: "Design a Direct Messaging app, profile, or chatbox. I designed a chatbox of a learning platform for kids."
   },
   {
     key: 14,
     title: "Day 14",
-    description: "Design a social share button/icon and be mindful of the size, imagery, placement, and purpose for sharing.",
+    description: "Design a Countdown Timer. I designed a countdown timer for a pregnancy app. I once read something online that compared babies in the womb to fruits to show their size and I thought it was cute so I recreated it for this countdown.",
     textWidth: true
   },
   {
     key: 15,
     title: "Day 15/16",
-    description: "Design a social share button/icon and be mindful of the size, imagery, placement, and purpose for sharing.",
+    description: "I combined the challenges for the 2 days into one. Design an On/Off switch. Design a pop-up overlay. Have you ever wished you could switch on or off your feelings and emotions at any point? That’s what inspired this design.",
     textWidth: true,
     gif: gif15
   },
@@ -115,25 +115,25 @@ const days = [
   {
     key: 18,
     title: "Day 18",
-    description: "Design an Email Receipt.",
+    description: "Design an analytics chart.",
     textWidth: true
   },
   {
     key: 19,
     title: "Day 19",
-    description: "Design an Email Receipt.",
+    description: "Design a leaderboard.",
     textWidth: true
   },
   {
     key: 20,
     title: "Day 20",
-    description: "Design an Email Receipt.",
+    description: "Design a location tracker.",
     textWidth: true
   },
   {
     key: 21,
     title: "Day 21",
-    description: "Design an Email Receipt."
+    description: "Design a home monitoring dashboard."
   },
   {
     key: 22,
@@ -215,7 +215,8 @@ const DailyUi = ({ data }) => {
       pageContext={{
         frontmatter: {
           type: "Design",
-          title: "Daily UI Challenge"
+          title: "Daily UI Challenge",
+          marginTop: 50
         }
       }}
     >
