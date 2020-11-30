@@ -38,7 +38,7 @@ const Contact = () => {
 
     if(process.env.NODE_ENV === 'production'){
       await axios.post(
-        '/',
+        '/contact',
         data.toString(),
         {
           headers: {
