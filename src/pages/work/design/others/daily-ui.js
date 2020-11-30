@@ -216,9 +216,8 @@ const DailyUi = ({ data }) => {
     <ArticleLayout
       pageContext={{
         frontmatter: {
-          small: false,
           type: "Design",
-          title: "Daily UX Writing Challenge"
+          title: "Daily UI Challenge"
         }
       }}
     >

@@ -1,8 +1,8 @@
 ---
-title: Tinkerman Expressions
-small: true
+title: Chuko’s Food & Spices
 type: Design
 ---
+
 
 
 
@@ -22,17 +22,17 @@ import ArticleCarouselItem from "../../../../components/Article/articleCarouselI
 
 With Chuko's Food and Spices, it's more than just "eating", it’s delivering joy and happiness with every bite.
 
-### ![Melange](../../../../assets/images/digital/chuko/chuko.png)
+#### ![Chuko's Food and Spices](../../../../assets/images/digital/chuko/chuko.png)
 
 I worked on designing a logo that captured the playful and happy nature of the brand especially as their mission statement is “Smile on your face, joy in your tummy”
 
-<Carousel>
+<Carousel marginBottom={50}>
   {
     props.data.carousel.nodes.map(image => (
       <ArticleCarouselItem
         fluid={image.childImageSharp.fluid}
-        maxWidth='50vw'
-      />
+        maxWidth='80%'
+    />
     ))
   }
 </Carousel>

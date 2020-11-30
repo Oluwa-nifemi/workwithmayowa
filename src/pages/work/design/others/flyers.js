@@ -5,6 +5,7 @@ import { ArticleTextSmall } from "../../../../components/Article/articleText"
 import { graphql } from "gatsby"
 import Card from "../../../../components/Card"
 import classes from "./others.module.css"
+import { classNames } from "../../../../util/functions"
 
 const Flyers = ({ data }) => {
   const fluidImages = useMemo(() => {
@@ -22,7 +23,6 @@ const Flyers = ({ data }) => {
     <ArticleLayout
       pageContext={{
         frontmatter: {
-          small: true,
           type: "Design",
           title: 'Digital/Flyers'
         }
@@ -52,7 +52,14 @@ const Flyers = ({ data }) => {
       <ArticleTextSmall>
         Ones&Twos is an entertainment and media company that managed some radio shows. I was in charge of making social media designs to promote new episodes of the different radio shows they handled.
       </ArticleTextSmall>
-      <div className={classes.cards}>
+      <div
+        className={
+          classNames(
+            classes.cards,
+            classes.cardsSmallMargin
+          )
+        }
+      >
         {
           Array.from({length: 6}).map((_, idx) => (
             <Card

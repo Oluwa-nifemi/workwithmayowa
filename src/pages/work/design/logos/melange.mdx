@@ -1,8 +1,8 @@
 ---
 title: Melange
-small: true
 type: Design
 ---
+
 
 
 
@@ -20,17 +20,17 @@ import ArticleCarouselItem from "../../../../components/Article/articleCarouselI
 
 The objective was to design a logo that is classy and beautiful. The logo should be representative of the chic yet timeless style of Melange’s target audience.
 
-### ![Melange](../../../../assets/images/digital/melange/melange.png)
+#### ![Melange](../../../../assets/images/digital/melange/melange.png)
 
 The minimalistic style was selected to keep the design timeless. The combination of the simple wordmark and swirl captures the feel of “Melange” being high class yet relaxed and fun.
 
-<Carousel>
+<Carousel marginBottom={50}>
   {
     props.data.carousel.nodes.map(image => (
       <ArticleCarouselItem
         fluid={image.childImageSharp.fluid}
-        maxWidth='50vw'
-      />
+        maxWidth='80%'
+    />
     ))
   }
 </Carousel>

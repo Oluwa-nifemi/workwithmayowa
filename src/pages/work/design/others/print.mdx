@@ -11,6 +11,7 @@ type: Design
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -47,7 +48,7 @@ import ArticleCarouselItem from "../../../../components/Article/articleCarouselI
 
 ## Joshua David is a conductor, musicologist and instrumentalist. I did different business card design options for him that creatively capture what he does.
 
-<Carousel>
+<Carousel marginBottom={50}>
   {
     props.data.joshuaDavid.nodes.map(image => (
       <ArticleCarouselItem
