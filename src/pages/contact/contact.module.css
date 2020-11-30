@@ -1,5 +1,5 @@
 .main{
-  padding: 75px 22.85% 85px;
+  padding: 0 22.85% 85px;
 }
 
 .header{
@@ -55,6 +55,7 @@
   height: 44px;
   transition: 300ms;
   padding-left: 10px;
+  font-family: var(--mulish);
 }
 
 .formInput:focus{
