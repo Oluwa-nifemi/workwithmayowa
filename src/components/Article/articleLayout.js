@@ -1,6 +1,5 @@
 import React from "react"
 import classes from "./article.module.css"
-import { classNames } from "../../util/functions"
 import Layout from "../Layout"
 import { MDXProvider } from "@mdx-js/react"
 import ArticleHeader from "./articleHeader"
@@ -11,7 +10,7 @@ import { ArticleImageFull, ArticleImageNormal } from "./articleImage"
 import BackLink from "../BackLink"
 
 const ArticleLayout = ({ children, pageContext }) => {
-  const small = pageContext.frontmatter.small
+  const marginTop = pageContext.frontmatter.marginTop
   const type = pageContext.frontmatter.type
 
   return (
@@ -31,16 +30,17 @@ const ArticleLayout = ({ children, pageContext }) => {
       }}
     >
       <Layout
-        mainClassName={
-          classNames(
-            classes.layout,
-            small && classes.layoutSmall
-          )
-        }
+        mainClassName={classes.layout}
         pageTitle={pageContext.frontmatter.title}
       >
         {children}
-        <BackLink to={`/work/${type.toLowerCase()}`} className={classes.articleBackLink}>
+        <BackLink
+          to={`/work/${type.toLowerCase()}`}
+          className={classes.articleBackLink}
+          style={{
+            marginTop: `${marginTop}px`
+          }}
+        >
           Back to {type}
         </BackLink>
       </Layout>
