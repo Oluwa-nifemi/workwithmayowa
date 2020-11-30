@@ -34,7 +34,7 @@ const Contact = () => {
       data.append(mappings[key], value)
     })
 
-    data.append('form-name', 'Contact Form')
+    data.append('form-name', 'contact')
 
     if(process.env.NODE_ENV === 'production'){
       await axios.post(
@@ -80,7 +80,10 @@ const Contact = () => {
         >hello@workwithmayowa.com.</a>{" "}
         You can also fill the form below and I’ll get in touch with you.
       </h5>
-      <form className={classes.form} netlify>
+      <form
+        className={classes.form}
+        data-netlify="true"
+      >
         <div className={classes.formRow}>
           <label htmlFor="name" className={classes.formLabel}>
             Your Name
