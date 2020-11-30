@@ -5,11 +5,11 @@ import ArticleHeader from "../../../../components/Article/articleHeader"
 import Carousel from "../../../../components/Carousel"
 import gif15 from "../../../../assets/images/digital/daily-ui/15_16.gif"
 import gif22 from "../../../../assets/images/digital/daily-ui/22.gif"
-import { ArticleImage } from "../../../../components/Article/articleImage"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import classes from "./others.module.css"
 import { classNames } from "../../../../util/functions"
+import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
 
 const days = [
   {
@@ -38,7 +38,8 @@ const days = [
     title: "Day 4",
     description: "Design a calculator. I designed 2 types of calculators; a basic one for a smart watch and a currency converter calculator",
     carousel: true,
-    count: 2
+    count: 2,
+    textWidth: true
   },
   {
     key: 5,
@@ -174,13 +175,10 @@ const renderRowImages = ({ textWidth, gif, carousel, count, key, name }, images)
       <Carousel>
         {
           Array.from({ length: count }).map((_, idx) => (
-            <ArticleImage full={!textWidth}>
-              <Img
-                fluid={images[`${key}.${idx + 1}`]}
-                alt={name}
-                key={`${key}.${idx + 1}`}
-              />
-            </ArticleImage>
+            <ArticleCarouselItem
+              fluid={images[`${key}.${idx + 1}`]}
+              maxWidth={textWidth ? '80%' : undefined}
+            />
           ))
         }
       </Carousel>
