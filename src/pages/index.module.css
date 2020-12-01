@@ -39,6 +39,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  max-height: 80%;
 }
 
 .imageBg {
