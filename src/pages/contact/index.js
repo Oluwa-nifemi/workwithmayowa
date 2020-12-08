@@ -39,7 +39,7 @@ const Contact = () => {
       const data = new URLSearchParams()
 
       Object.entries(formValues).forEach(([key, value]) => {
-        data.append(mappings[key], value)
+        data.append(key, value)
       })
 
       data.append('form-name', 'contact')
