@@ -98,6 +98,7 @@ const Contact = () => {
       <form
         className={classes.form}
         data-netlify="true"
+        name="contact"
       >
         <div className={classes.formRow}>
           <label htmlFor="name" className={classes.formLabel}>
