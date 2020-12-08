@@ -10,6 +10,12 @@ const mappings = {
   message: 'Message'
 }
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 const Contact = () => {
   const [formValues, setFormValues] = useState({
     name: "",
@@ -28,6 +34,15 @@ const Contact = () => {
   const onSubmit = async () => {
     setIsLoading(true)
 
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formValues })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    return
     const data = new URLSearchParams()
 
     Object.entries(formValues).forEach(([key, value]) => {
