@@ -3,6 +3,7 @@ import Layout from "../../components/Layout"
 import classes from "./contact.module.css"
 import { classNames } from "../../util/functions"
 import axios from "axios"
+import PulseLoader from "react-spinners/PulseLoader"
 
 const mappings = {
   name: 'Name',
@@ -32,41 +33,36 @@ const Contact = () => {
   }
 
   const onSubmit = async () => {
-    setIsLoading(true)
+    try {
+      setIsLoading(true)
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formValues })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      const data = new URLSearchParams()
 
-    return
-    const data = new URLSearchParams()
+      Object.entries(formValues).forEach(([key, value]) => {
+        data.append(mappings[key], value)
+      })
 
-    Object.entries(formValues).forEach(([key, value]) => {
-      data.append(mappings[key], value)
-    })
+      data.append('form-name', 'contact')
 
-    data.append('form-name', 'contact')
-
-    if(process.env.NODE_ENV === 'production'){
-      await axios.post(
-        '/',
-        data.toString(),
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+      if (process.env.NODE_ENV === 'production') {
+        await axios.post(
+          '/',
+          data.toString(),
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
           }
-        }
-      )
+        )
 
-      setIsLoading(false)
-    }else{
-      setTimeout(() => {
         setIsLoading(false)
-      }, 3000)
+      } else {
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000)
+      }
+    }catch (e){
+      setIsLoading(false)
     }
   }
 
@@ -144,16 +140,24 @@ const Contact = () => {
           />
         </div>
         <button
-          className={
-            classNames(
-              classes.formSendButton,
-              isLoading && classes.formSendButtonIsLoading
-            )
-          }
+          className={classes.formSendButton}
           disabled={buttonIsDisabled}
           onClick={onSubmit}
         >
-          Send Message
+          {
+            isLoading ? (
+              <PulseLoader
+                loading
+                size={8}
+                margin={2}
+                color='white'
+              />
+            ) : (
+              <>
+                Send Message
+              </>
+            )
+          }
         </button>
         <p className={classes.formShy}>
           Don’t be shy, I’m waiting to hear from you!
