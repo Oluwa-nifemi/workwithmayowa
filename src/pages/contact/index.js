@@ -110,6 +110,7 @@ const Contact = () => {
             className={classes.formInput}
             onChange={onChange('name')}
             value={formValues.name}
+            name='name'
           />
         </div>
         <div className={classes.formRow}>
@@ -122,6 +123,7 @@ const Contact = () => {
             className={classes.formInput}
             onChange={onChange('email')}
             value={formValues.email}
+            name='email'
           />
         </div>
         <div className={classes.formRow}>
@@ -130,6 +132,7 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
+            name="message"
             className={
               classNames(
                 classes.formInput,
