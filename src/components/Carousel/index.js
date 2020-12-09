@@ -32,7 +32,7 @@ const Carousel = ({ children, marginBottom = 75 }) => {
     <div
       className={classes.carousel}
       style={{
-        marginBottom: `${marginBottom}px`
+        '--margin-bottom': `${marginBottom}px`
       }}
     >
       <button
