@@ -1,0 +1,31 @@
+.carouselItem{
+  width: 48%;
+  margin-right: 2%;
+}
+
+:global(.flickity-page-dots){
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 1px;
+}
+
+:global(.flickity-page-dots .dot){
+  width: unset;
+  flex: 1;
+  height: 10px;
+  border-radius: 1px;
+  margin: 0;
+  background: #C09BD8;
+}
+
+@media (max-width: 600px) {
+  .carouselItem{
+    width: 90%;
+    margin-right: 5%;
+  }
+
+  .carouselItem:last-of-type{
+    width: 100%;
+  }
+}
