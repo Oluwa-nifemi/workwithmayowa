@@ -2,6 +2,7 @@ import React, { useMemo } from "react"
 import classes from "./writing-design-layout.module.css"
 import Layout from "../../components/Layout"
 import Card from "../../components/Card"
+import MobileCarousel from "../../components/MobileCarousel"
 
 const WritingDesignLayout = ({ data, sections, pageTitle }) => {
   const images = useMemo(() => {
@@ -34,6 +35,19 @@ const WritingDesignLayout = ({ data, sections, pageTitle }) => {
                   />
                 ))
               }
+            </div>
+            <div className={classes.sectionCarousel}>
+              <MobileCarousel>
+                {
+                  items.map(({ imageId, title, to }) => (
+                    <Card
+                      fluid={images[imageId]}
+                      title={title}
+                      to={to}
+                    />
+                  ))
+                }
+              </MobileCarousel>
             </div>
           </div>
         ))
