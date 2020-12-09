@@ -16,3 +16,15 @@
   line-height: 3.3rem;
   color: var(--dark-purple);
 }
+
+@media (max-width: 800px) {
+  .backLink{
+    grid-template-columns: 20px auto;
+    grid-column-gap: 3px;
+  }
+
+  .backLinkText{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}

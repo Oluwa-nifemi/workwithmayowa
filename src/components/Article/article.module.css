@@ -106,7 +106,15 @@
   width: 100%;
 }
 
+:global(.split-div){
+  margin-bottom: 75px;
+}
+
 @media (max-width: 800px) {
+  .layout{
+    padding-bottom: 25px;
+  }
+
   .articleText,
   .articleList,
   .articleHeader,
@@ -128,5 +136,19 @@
 
   .articleList .articleText{
     padding-left: 0;
+  }
+
+  .articleHeader{
+    font-size: 2.2rem;
+    line-height: 3.26rem;
+  }
+
+  .articleText{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  :global(.split-div){
+    margin-bottom: 25px;
   }
 }

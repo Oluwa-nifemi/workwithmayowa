@@ -1,8 +1,8 @@
-.layout{
+.layout {
   padding-bottom: 92px;
 }
 
-.items{
+.items {
   padding-bottom: 50px;
   padding-left: 25%;
   padding-right: 25%;
@@ -10,17 +10,17 @@
   grid-row-gap: 150px;
 }
 
-.item{
+.item {
   display: grid;
   grid-row-gap: 25px;
 }
 
-.itemImages{
+.itemImages {
   display: grid;
   row-gap: 25px;
 }
 
-.itemName{
+.itemName {
   font-family: var(--oswald);
   font-style: normal;
   font-weight: normal;
@@ -29,14 +29,23 @@
   color: var(--dark-purple);
 }
 
-.backLinkWrapper{
+.backLinkWrapper {
   padding-left: 8.6%;
 }
 
 @media (max-width: 800px) {
-  .items{
+  .layout {
+    padding-bottom: 30px;
+  }
+
+  .items {
     padding-left: 8.6%;
     padding-right: 8.6%;
     grid-row-gap: 58px;
+  }
+
+  .itemName{
+    font-size: 2.2rem;
+    line-height: 3.26rem;
   }
 }

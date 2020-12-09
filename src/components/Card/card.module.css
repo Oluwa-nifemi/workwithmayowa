@@ -30,3 +30,15 @@
   color: var(--dark-purple);
   margin-top: 18px;
 }
+
+@media (max-width: 800px) {
+  .card {
+    padding: 8px;
+    border-radius: 3px;
+  }
+
+  .cardTitle{
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+}
