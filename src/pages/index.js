@@ -71,21 +71,13 @@ const Index = ({ data }) => {
           variants={{
             open: {
               height: '100%',
-              x: 17,
-              y: 17
             },
             closed: {
               height: '0',
-              x: 17,
-              y: 17
             }
           }}
           transition={{ duration: 0.5, delayChildren: 1.5 }}
           className={classes.imageWrapper}
-          whileHover={{
-            x: 10,
-            y: 10,
-          }}
         >
           <motion.div
             initial='big'

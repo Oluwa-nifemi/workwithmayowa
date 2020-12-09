@@ -54,6 +54,12 @@
 
 .imageWrapper{
   overflow: hidden;
+  transition: 300ms;
+  transform: translate(17px, 17px);
+}
+
+.imageWrapper:hover{
+  transform: translate(10px, 10px);
 }
 
 .image {
@@ -142,7 +148,11 @@
 
   .imageContainer{
     --img-width: 240px;
-    --img-height: calc(min(40vh, 270px));
+    --img-height: 40vh;
+  }
+
+  .imageWrapper{
+    transform: translate(10px, 10px);
   }
 }
 
