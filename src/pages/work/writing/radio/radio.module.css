@@ -38,9 +38,23 @@
 
 
 @media (max-width: 800px) {
+  .layout{
+    padding-bottom: 30px;
+  }
+
   .items{
     padding-left: 8.6%;
     padding-right: 8.6%;
     grid-row-gap: 58px;
+  }
+
+  .itemName{
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+  }
+
+  .itemDescription{
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }

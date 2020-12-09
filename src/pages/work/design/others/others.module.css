@@ -1,4 +1,4 @@
-.cards{
+.cards {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
@@ -7,31 +7,51 @@
   padding: 0 22.85%;
 }
 
-.cardsSmallMargin{
+.cardsSmallMargin {
   margin-bottom: 50px;
 }
 
-.itemsWrapper{
+.itemsWrapper {
   display: flex;
   flex-direction: column;
   row-gap: 75px;
- width: 100%;
-}
-
-.item{
   width: 100%;
 }
 
-.textWidth{
+.item {
+  width: 100%;
+}
+
+.textWidth {
   padding: 0 22.85%;
 }
 
-.fullWidth{
+.fullWidth {
   padding: 0 12%;
 }
 
-.gifImage{
+.gifImage {
   display: block;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .cards,
+  .fullWidth,
+  .textWidth {
+    padding: 0 8.6%;
+  }
+
+  .cards{
+    margin-bottom: 50px;
+  }
+
+  .itemsWrapper{
+    row-gap: 50px;
+  }
+
+  .itemCarousel{
+    margin-bottom: 0;
+  }
 }

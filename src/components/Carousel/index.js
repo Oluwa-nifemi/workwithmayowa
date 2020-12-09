@@ -3,6 +3,7 @@ import left from "../../assets/images/left.svg"
 import right from "../../assets/images/right.svg"
 import classes from "./carousel.module.css"
 import { AnimateSharedLayout, motion } from "framer-motion"
+import { classNames } from "../../util/functions"
 
 const wrap = (total, currentPage) => {
   return Math.abs(currentPage % total)
@@ -17,7 +18,7 @@ const variants = {
   }
 }
 
-const Carousel = ({ children, marginBottom = 75 }) => {
+const Carousel = ({ children, marginBottom = 75, className }) => {
   const childrenArray = [].concat(children)
 
   const [page, setPage] = useState(0)
@@ -30,7 +31,7 @@ const Carousel = ({ children, marginBottom = 75 }) => {
 
   return (
     <div
-      className={classes.carousel}
+      className={classNames(classes.carousel, className)}
       style={{
         '--margin-bottom': `${marginBottom}px`
       }}

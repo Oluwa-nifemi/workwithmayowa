@@ -172,7 +172,10 @@ const renderRowImages = ({ textWidth, gif, carousel, count, key, name }, images)
     )
   } else if (carousel) {
     return (
-      <Carousel marginBottom={0}>
+      <Carousel
+        marginBottom={0}
+        className={classes.itemCarousel}
+      >
         {
           Array.from({ length: count }).map((_, idx) => (
             <ArticleCarouselItem

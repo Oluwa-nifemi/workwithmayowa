@@ -36,3 +36,19 @@
 .talkLink:hover{
   filter: brightness(50%);
 }
+
+@media (max-width: 800px) {
+  .main {
+    padding: 0 8.6% 50px;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+  .text,
+  .talkLink{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}

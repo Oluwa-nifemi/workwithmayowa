@@ -29,6 +29,11 @@
 }
 
 @media (max-width: 800px) {
+  .sectionTitle{
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+  }
+
   .sectionCards{
     display: none;
   }
