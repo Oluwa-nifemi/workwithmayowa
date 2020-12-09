@@ -105,3 +105,28 @@
   grid-column-gap: 20px;
   width: 100%;
 }
+
+@media (max-width: 800px) {
+  .articleText,
+  .articleList,
+  .articleHeader,
+  .articleImageNormalWidth,
+  .articleImageFullWidth{
+    padding: 0 8.6%;
+    max-width: 100%;
+  }
+
+  .articleText,
+  .articleImageFullWidth,
+  .articleImageNormalWidth {
+    margin-bottom: 25px;
+  }
+
+  .articleList{
+    margin-bottom: 0
+  }
+
+  .articleList .articleText{
+    padding-left: 0;
+  }
+}
