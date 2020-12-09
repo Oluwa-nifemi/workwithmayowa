@@ -5,24 +5,24 @@ import logo from "../../assets/images/logo.svg"
 import cancel from "../../assets/images/cancel.svg"
 import { motion } from "framer-motion"
 
-const SideNav = ({showNav,toggleShowNav}) => {
+const SideNav = ({ showNav, toggleShowNav }) => {
   return (
     <motion.aside
       className={classes.sideNav}
-      animate={showNav ? 'show' : 'hide'}
+      animate={showNav ? "show" : "hide"}
       variants={{
         show: {
           x: 0
         },
         hide: {
-          x: '100%'
+          x: "100%"
         }
       }}
-      transition={{duration: 0.3}}
+      transition={{ duration: 0.3 }}
     >
       <div className={classes.sideNavTop}>
         <Link
-          to={'/'}
+          to={"/"}
         >
           <img
             src={logo}
@@ -36,22 +36,22 @@ const SideNav = ({showNav,toggleShowNav}) => {
       </div>
       <div className={classes.sideNavLinks}>
         <Link
-          to={'/'}
+          to={"/"}
           className={classes.navLink}
           activeClassName={classes.navLinkActive}
         >
           Home
         </Link>
         <Link
-          to={'/about'}
+          to={"/about"}
           className={classes.navLink}
           activeClassName={classes.navLinkActive}
         >
           About
         </Link>
-        <WorkDropdown/>
+        <WorkDropdown />
         <Link
-          to={'/contact'}
+          to={"/contact"}
           className={classes.navLink}
           activeClassName={classes.navLinkActive}
         >
@@ -62,10 +62,30 @@ const SideNav = ({showNav,toggleShowNav}) => {
   )
 }
 
-export const WorkDropdown = () => {
+const dropdownVariants = {
+  show: {
+    x: 0,
+    opacity: 1
+  },
+  hide: {
+    x: -20,
+    opacity: 0
+  }
+}
+
+const WorkDropdown = () => {
   const [show, setShow] = useState(false)
 
   const toggleShow = () => setShow(prev => !prev)
+
+  const transition = show ?
+    {
+      duration: 0.3,
+      delayChildren: 0.5
+    } : {
+      duration: 0.3,
+      delay: 0.3
+    }
 
   return (
     <div>
@@ -78,10 +98,10 @@ export const WorkDropdown = () => {
       <motion.div
         className={classes.sideNavDropdownItems}
         initial='closed'
-        animate={show ? 'open' : 'closed'}
+        animate={show ? "open" : "closed"}
         variants={{
           open: {
-            height: 'auto',
+            height: "auto",
             opacity: 1
           },
           closed: {
@@ -89,19 +109,32 @@ export const WorkDropdown = () => {
             opacity: 0
           }
         }}
+        transition={transition}
       >
-        <Link
-          to={'/work/writing'}
-          className={classes.navDropdownItem}
+        <motion.div
+          animate={show ? "show" : "hide"}
+          variants={dropdownVariants}
+          transition={{ duration: 0.3 }}
         >
-          Writing
-        </Link>
-        <Link
-          to={'/work/design'}
-          className={classes.navDropdownItem}
+          <Link
+            to={"/work/writing"}
+            className={classes.navDropdownItem}
+          >
+            Writing
+          </Link>
+        </motion.div>
+        <motion.div
+          animate={show ? "show" : "hide"}
+          variants={dropdownVariants}
+          transition={{ duration: 0.3, delay: 0.2 }}
         >
-          Design
-        </Link>
+          <Link
+            to={"/work/design"}
+            className={classes.navDropdownItem}
+          >
+            Design
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   )
