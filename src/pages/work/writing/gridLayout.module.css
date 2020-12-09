@@ -33,3 +33,10 @@
   padding-left: 8.6%;
 }
 
+@media (max-width: 800px) {
+  .items{
+    padding-left: 8.6%;
+    padding-right: 8.6%;
+    grid-row-gap: 58px;
+  }
+}
