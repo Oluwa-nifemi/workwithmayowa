@@ -61,3 +61,84 @@
 .navDropdownItem:first-of-type{
   border-bottom: 1px solid var(--gray);
 }
+
+.navToggle{
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.sideNav{
+  padding: 30px 45px;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #ebc3db;
+  z-index: 100;
+  width: 100%;
+}
+
+.sideNavTop{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.sideNavLinks{
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.sideNavLinks .navLink{
+  margin-bottom: 16px;
+  margin-left: 0;
+  width: fit-content;
+}
+
+.sideNavLinks .navDropdownButton{
+  margin-bottom: 0;
+}
+
+.sideNavDropdownItems{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.sideNavDropdownItems .navDropdownItem{
+  border: none;
+  width: fit-content;
+}
+
+@media (max-width: 800px) {
+  .header{
+    padding-top: 30px;
+    height: unset;
+    align-items: center;
+  }
+
+  .navLogo{
+    width: 12rem;
+  }
+
+  .navLink{
+    display: none;
+  }
+
+  .navToggle{
+    display: block;
+    margin-left: auto;
+  }
+
+  .sideNav{
+    display: flex;
+  }
+
+  .sideNavLinks .navLink{
+    display: block;
+    margin-left: 0;
+  }
+}

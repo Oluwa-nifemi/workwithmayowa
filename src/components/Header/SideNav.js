@@ -1,25 +1,28 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import classes from "./header.module.css"
-import logo from "../../assets/images/logo.svg"
 import { Link } from "gatsby"
+import logo from "../../assets/images/logo.svg"
+import cancel from "../../assets/images/cancel.svg"
 import { motion } from "framer-motion"
-import { useHideOnClickOutside } from "../../hooks/useHideOnClickOutside"
-import navIcon from "../../assets/images/nav.svg"
-import SideNav from "./SideNav"
 
-const Header = () => {
+const SideNav = () => {
   return (
-    <nav className={classes.header}>
-      <Link
-        to={'/'}
-      >
-        <img
-          src={logo}
-          alt="Logo"
-          className={classes.navLogo}
-        />
-      </Link>
-      <div className={classes.navLinks}>
+    <aside className={classes.sideNav}>
+      <div className={classes.sideNavTop}>
+        <Link
+          to={'/'}
+        >
+          <img
+            src={logo}
+            alt="Logo"
+            className={classes.navLogo}
+          />
+        </Link>
+        <button className={classes.navToggle}>
+          <img src={cancel} alt="Close Side Nav" />
+        </button>
+      </div>
+      <div className={classes.sideNavLinks}>
         <Link
           to={'/'}
           className={classes.navLink}
@@ -43,32 +46,18 @@ const Header = () => {
           Contact
         </Link>
       </div>
-      <button className={classes.navToggle}>
-        <img src={navIcon} alt="Open Nav" />
-      </button>
-      <SideNav/>
-    </nav>
-  );
-};
 
-const WorkDropdown = () => {
+    </aside>
+  )
+}
+
+export const WorkDropdown = () => {
   const [show, setShow] = useState(false)
 
   const toggleShow = () => setShow(prev => !prev)
 
-  const dropdownRef = useRef()
-
-  useHideOnClickOutside({
-    open: show,
-    onHide: toggleShow,
-    ref: dropdownRef
-  })
-
   return (
-    <div
-      className={classes.navLink}
-      ref={dropdownRef}
-    >
+    <div>
       <button
         className={classes.navDropdownButton}
         onClick={toggleShow}
@@ -76,7 +65,7 @@ const WorkDropdown = () => {
         Work
       </button>
       <motion.div
-        className={classes.navDropdownItems}
+        className={classes.sideNavDropdownItems}
         initial='closed'
         animate={show ? 'open' : 'closed'}
         variants={{
@@ -104,7 +93,7 @@ const WorkDropdown = () => {
         </Link>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default SideNav
