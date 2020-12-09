@@ -78,7 +78,8 @@
   height: 100%;
   background: #ebc3db;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .sideNavTop{
