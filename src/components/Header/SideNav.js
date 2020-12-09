@@ -9,6 +9,7 @@ const SideNav = ({ showNav, toggleShowNav }) => {
   return (
     <motion.aside
       className={classes.sideNav}
+      initial={false}
       animate={showNav ? "show" : "hide"}
       variants={{
         show: {
