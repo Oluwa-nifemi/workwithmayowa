@@ -3,6 +3,7 @@
   background: #FFFFFF;
   border-radius: 5px;
   text-decoration: unset;
+  display: block;
 }
 
 .cardImage{
