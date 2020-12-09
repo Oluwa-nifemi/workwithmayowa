@@ -8,6 +8,10 @@ import navIcon from "../../assets/images/nav.svg"
 import SideNav from "./SideNav"
 
 const Header = () => {
+  const [showNav, setShowNav] = useState(false)
+
+  const toggleShowNav = () => setShowNav(prev => !prev)
+
   return (
     <nav className={classes.header}>
       <Link
@@ -43,10 +47,13 @@ const Header = () => {
           Contact
         </Link>
       </div>
-      <button className={classes.navToggle}>
+      <button className={classes.navToggle} onClick={toggleShowNav}>
         <img src={navIcon} alt="Open Nav" />
       </button>
-      <SideNav/>
+      <SideNav
+        showNav={showNav}
+        toggleShowNav={toggleShowNav}
+      />
     </nav>
   );
 };

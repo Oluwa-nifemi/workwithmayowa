@@ -5,9 +5,21 @@ import logo from "../../assets/images/logo.svg"
 import cancel from "../../assets/images/cancel.svg"
 import { motion } from "framer-motion"
 
-const SideNav = () => {
+const SideNav = ({showNav,toggleShowNav}) => {
   return (
-    <aside className={classes.sideNav}>
+    <motion.aside
+      className={classes.sideNav}
+      animate={showNav ? 'show' : 'hide'}
+      variants={{
+        show: {
+          x: 0
+        },
+        hide: {
+          x: '100%'
+        }
+      }}
+      transition={{duration: 0.3}}
+    >
       <div className={classes.sideNavTop}>
         <Link
           to={'/'}
@@ -18,7 +30,7 @@ const SideNav = () => {
             className={classes.navLogo}
           />
         </Link>
-        <button className={classes.navToggle}>
+        <button className={classes.navToggle} onClick={toggleShowNav}>
           <img src={cancel} alt="Close Side Nav" />
         </button>
       </div>
@@ -46,8 +58,7 @@ const SideNav = () => {
           Contact
         </Link>
       </div>
-
-    </aside>
+    </motion.aside>
   )
 }
 
