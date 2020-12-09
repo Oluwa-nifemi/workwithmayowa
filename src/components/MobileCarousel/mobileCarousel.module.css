@@ -17,6 +17,7 @@
   border-radius: 1px;
   margin: 0;
   background: #C09BD8;
+  transition: 300ms;
 }
 
 @media (max-width: 600px) {
