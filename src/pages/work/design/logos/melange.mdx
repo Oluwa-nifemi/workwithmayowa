@@ -10,6 +10,7 @@ type: Design
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { graphql } from "gatsby"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
@@ -29,7 +30,6 @@ The minimalistic style was selected to keep the design timeless. The combination
     props.data.carousel.nodes.map(image => (
       <ArticleCarouselItem
         fluid={image.childImageSharp.fluid}
-        maxWidth='80%'
     />
     ))
   }
