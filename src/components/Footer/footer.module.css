@@ -19,3 +19,9 @@
 .footerLink + .footerLink{
   margin-left: 26px;
 }
+
+@media (max-width: 800px) {
+  .footer{
+    justify-content: center;
+  }
+}
