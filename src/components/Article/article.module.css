@@ -130,6 +130,10 @@
     margin-bottom: 25px;
   }
 
+  .articleTextBold{
+    margin-bottom: 0;
+  }
+
   .articleList{
     margin-bottom: 0
   }
@@ -146,6 +150,11 @@
   .articleText{
     font-size: 1.6rem;
     line-height: 2rem;
+  }
+
+  .articleCarouselItemText{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   :global(.split-div){
