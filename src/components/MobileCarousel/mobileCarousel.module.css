@@ -17,7 +17,11 @@
   border-radius: 1px;
   margin: 0;
   background: #C09BD8;
-  transition: 300ms;
+  transition: 300ms ease-in;
+}
+
+:global(.flickity-page-dots .dot.is-selected){
+  transition: 300ms ease-out;
 }
 
 @media (max-width: 600px) {
