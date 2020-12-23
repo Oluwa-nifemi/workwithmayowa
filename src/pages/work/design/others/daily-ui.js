@@ -10,6 +10,7 @@ import { graphql } from "gatsby"
 import classes from "./others.module.css"
 import { classNames } from "../../../../util/functions"
 import ArticleCarouselItem from "../../../../components/Article/articleCarouselItem"
+import TapToZoom from "../../../../components/TapToZoom"
 
 const days = [
   {
@@ -192,10 +193,12 @@ const renderRowImages = ({ textWidth, gif, carousel, count, key, name }, images)
     <div
       className={textWidth ? classes.textWidth : classes.fullWidth}
     >
-      <Img
-        fluid={images[key]}
-        alt={name}
-      />
+      <TapToZoom>
+        <Img
+          fluid={images[key]}
+          alt={name}
+        />
+      </TapToZoom>
     </div>
 
   )

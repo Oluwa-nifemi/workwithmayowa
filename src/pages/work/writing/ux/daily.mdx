@@ -11,10 +11,12 @@ type: Writing
 
 
 
+
 import Carousel from "../../../../components/Carousel"
 import { convertTo3By3Array } from "../../../../util/functions"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import TapToZoom from "../../../../components/TapToZoom"
 
 I signed up for the Daily UX Writing Challenge and got writing prompts in my mail for 15 days. It was a bit more challenging than I had assumed it would be especially because the restraints helped me to think and rethink about my word choices. I also designed all the screens because well, why not?
 # Day 1
@@ -213,13 +215,15 @@ This bonus challenge was definitely the most difficult to work on. It took a lot
 <Carousel>
   {
     convertTo3By3Array(props.data.day15Images.nodes).map(images => (
-      <div
-        className='three-images'
-      >
-        {images.map(image => (
-          <Img fluid={image.childImageSharp.fluid}/>
-        ))}
-      </div>
+      <TapToZoom>
+        <div
+          className='three-images'
+        >
+          {images.map(image => (
+            <Img fluid={image.childImageSharp.fluid}/>
+          ))}
+        </div>
+      </TapToZoom>
     ))
   }
 </Carousel>
