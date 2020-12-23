@@ -18,14 +18,14 @@
   background-color: white;
   border-radius: 8px;
   overflow-y: auto;
-  padding: 35px 0;
+  padding: 60px 0;
   position: relative;
 }
 
 .modalClose {
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 20px;
+  right: 20px;
   background-color: transparent;
   border: none;
   padding: 5px;
@@ -42,6 +42,10 @@
 }
 
 @media (max-width: 960px) {
+  .modal{
+    padding: 35px 0;
+  }
+
   .modalClose{
     width: 20px;
     right: 6px;
