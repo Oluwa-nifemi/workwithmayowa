@@ -4,6 +4,7 @@ import classes from "./index.module.css"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
+import SEO from "../components/SEO"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState({})
@@ -23,6 +24,7 @@ const Index = ({ data }) => {
       mainClassName={classes.main}
       centerFooter={false}
     >
+      <SEO title='Home'/>
       <h1 className={classes.intro}>
         Hello, I’m Mayowa Adeyemi, a {' '}
         <Link

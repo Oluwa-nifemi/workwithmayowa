@@ -1,12 +1,14 @@
-import React from 'react';
-import classes from './layout.module.css';
-import Header from '../Header';
-import Footer from '../Footer';
-import {classNames} from '../../util/functions';
+import React from "react"
+import classes from "./layout.module.css"
+import Header from "../Header"
+import Footer from "../Footer"
+import { classNames } from "../../util/functions"
+import SEO from "../SEO"
 
 const Layout = ({ children, isPageHeight = false, mainClassName, centerFooter = true, pageTitle }) => {
   return (
     <div className={classNames(classes.layout, isPageHeight && classes.layoutPageHeight)}>
+      <SEO title={pageTitle}/>
       <Header/>
       {
         pageTitle && (
