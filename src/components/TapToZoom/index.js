@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Modal from "../Modal"
 import classes from "./tapToZoom.module.css"
 
-const TapToZoom = ({children, modalContent}) => {
+const TapToZoom = ({children, modalContent = children}) => {
   const [zoomed, setZoomed] = useState(false)
 
   const toggleZoom = () => setZoomed(prevState => !prevState)
