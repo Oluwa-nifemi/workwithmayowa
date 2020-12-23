@@ -42,6 +42,17 @@ module.exports = {
           },
         ],
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Work With Mayowa`,
+        short_name: `WWM`,
+        start_url: `/`,
+        background_color: `#f3dbea`,
+        theme_color: `#6A2C70`,
+        icon: `src/assets/images/favicon.png`
+      }
+    },
   ],
 }
