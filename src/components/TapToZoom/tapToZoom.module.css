@@ -1,0 +1,28 @@
+.zoom{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoomText{
+  margin-bottom: 10px;
+  display: none;
+  font-family: var(--mulish);
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: var(--dark-purple);
+}
+
+@media (max-width: 800px) {
+  .zoom{
+    cursor: pointer;
+  }
+
+  .zoomText{
+    display: block;
+  }
+}
