@@ -55,12 +55,9 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-DMJNVEJ64G", // Google Analytics / GA
-        ],
+        id: "G-DMJNVEJ64G",
       }
     },
   ],
