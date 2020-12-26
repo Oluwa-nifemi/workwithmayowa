@@ -7,7 +7,7 @@ const items = [
   {
     fileName: "verve.mpeg",
     name: "Verve Life 3.0",
-    description: "Verve Life is a fitness event organized by Verve. The theme for Verve Life 3.0 was “Go Hard or Go Home”"
+    description: "Verve Life is a fitness event organized by Verve. The theme for Verve Life 3.0 was “Go Hard or Go Home”."
   },
   {
     fileName: "gridcode.mpeg",
@@ -17,12 +17,12 @@ const items = [
   {
     fileName: "fets.mp3",
     name: "Fetswallet IBEDC",
-    description: "Fetswallet, a mobile payment platform, wanted people to know they can now easily pay their Ibadan Electricity Distribution Company (IBEDC) bills from various convenient channels"
+    description: "Fetswallet, a mobile payment platform, wanted people to know they can now easily pay their Ibadan Electricity Distribution Company (IBEDC) bills from various convenient channels."
   },
   {
     fileName: "mtn.mp3",
     name: "MTN VTU Bonus",
-    description: "MTN was introducing a bonus promo for airtime recharge done via Virtual Top-Up"
+    description: "MTN was introducing a bonus promo for airtime recharge done via Virtual Top-Up."
   }
 ]
 

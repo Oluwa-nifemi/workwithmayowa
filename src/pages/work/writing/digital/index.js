@@ -23,14 +23,14 @@ const items = [
   },
   {
     title: 'Verve International Women’s Day',
-    description: 'In celebration of the 2019 International Women’s Day with theme “Balance for Better”',
+    description: 'In celebration of the 2019 International Women’s Day with theme “Balance for Better”.',
     images: [
       'verve'
     ]
   },
   {
     title: 'Interswitch International Women’s Day',
-    description: 'In celebration of the 2020 International Women’s Day with theme “Each For Equal”',
+    description: 'In celebration of the 2020 International Women’s Day with theme “Each For Equal”.',
     images: [
       'IWD1',
       {
@@ -40,7 +40,7 @@ const items = [
   },
   {
     title: 'Interswitch Recruitment',
-    description: 'Interswitch, a FinTech company was hiring for developers so we used lingo that spoke directly to the target audience',
+    description: 'Interswitch, a FinTech company was hiring for developers so we used lingo that spoke directly to the target audience.',
     images: [
       'switch-1',
       'switch-2'
