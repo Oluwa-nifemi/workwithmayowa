@@ -20,7 +20,7 @@ const About = ({ data }) => {
       </p>
       <p className={classes.text}>
         My understanding of writing and design helps me collaborate effectively in teams whether in advertising or UX. You can view my resume <a
-        href="https://drive.google.com/file/d/1mDREzzqL1r64bnpsZeRNzeXiokDQuT6I/view?usp=sharing" target="_blank" rel='noreferrer'>here</a> to see where I’ve worked so far.
+        href="https://drive.google.com/file/d/1mDREzzqL1r64bnpsZeRNzeXiokDQuT6I/view?usp=sharing" target="_blank" rel='noreferrer'>here</a> to see where I’ve worked so far. I'm currently located in Lagos, Nigeria but available to work with you wherever you are.
       </p>
       <p className={classes.text}>
         Think I’ll make a good fit for your next project?
