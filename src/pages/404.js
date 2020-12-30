@@ -16,15 +16,18 @@ const Lost = () => {
 
   return (
     <Layout
-      pageTitle='You’ve Unlocked My Secret Broken Page'
       mainClassName={classes.lost}
     >
+      <h1 className={classes.pageTitle}>
+        You’ve Unlocked My Secret <span className={classes.strikethrough}>Broken</span> Page
+      </h1>
       {
         gif && (
           <img
             src={gif}
             ref={videoRef}
             alt='404 Gif'
+            className={classes.image}
           />
         )
       }
