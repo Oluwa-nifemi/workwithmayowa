@@ -19,11 +19,15 @@ const Lost = () => {
       pageTitle='You’ve Unlocked My Secret Broken Page'
       mainClassName={classes.lost}
     >
-      <img
-        src={gif}
-        ref={videoRef}
-        alt='404 Gif'
-      />
+      {
+        gif && (
+          <img
+            src={gif}
+            ref={videoRef}
+            alt='404 Gif'
+          />
+        )
+      }
       <p className={classes.text}>
         The truth is, there’s nothing to see here. Were you looking for my <Link to='/work/writing'>writing</Link> or <Link to='/work/design'>design</Link> works? Trying to learn more <Link to='/about'>about me</Link>? You can also head back <Link to='/'>home</Link> and start afresh.
       </p>
