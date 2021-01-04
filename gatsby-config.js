@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Work With Mayowa`,
-    description: `My full name is Oluwamayowa Adeyemi but everyone just calls me Mayowa.`,
+    description: `My name is Mayowa Adeyemi. A writer & designer.`,
     author: `@oluwa-nifemi`,
   },
   plugins: [
