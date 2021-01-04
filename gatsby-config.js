@@ -55,9 +55,11 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        id: "G-DMJNVEJ64G",
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-DMJNVEJ64G",
+        head: true
       }
     },
   ],
