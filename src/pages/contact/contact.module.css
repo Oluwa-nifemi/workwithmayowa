@@ -19,6 +19,10 @@
   margin-bottom: 75px;
 }
 
+.descriptionSuccess{
+  margin: 10px 0 15px;
+}
+
 .description a{
   color: inherit;
   text-decoration: underline;
