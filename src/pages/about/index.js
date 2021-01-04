@@ -23,7 +23,7 @@ const About = ({ data }) => {
         href="https://drive.google.com/file/d/1mDREzzqL1r64bnpsZeRNzeXiokDQuT6I/view?usp=sharing" target="_blank" rel='noreferrer'>here</a> to see where I’ve worked so far. I'm currently located in Lagos, Nigeria but available to work with you wherever you are.
       </p>
       <p className={classes.text}>
-        Think I’ll make a good fit for your next project?
+        Want to hire me for your next project?
       </p>
       <a
         href='mailto:oluwamayowaadeyemi@gmail.com'
