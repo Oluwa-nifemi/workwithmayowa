@@ -22,6 +22,15 @@ const items = [
     ],
   },
   {
+    title: 'Quickteller USSD',
+    description: 'Quickteller wanted to introduce their USSD code *723# and one of its key features was how it made faster financial transactions.',
+    images: [
+      {
+        videoUrl: 'https://youtu.be/st2WL_YtuYE'
+      }
+    ]
+  },
+  {
     title: 'Verve International Women’s Day',
     description: 'In celebration of the 2019 International Women’s Day with theme “Balance for Better”.',
     images: [
