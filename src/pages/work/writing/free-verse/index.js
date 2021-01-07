@@ -35,7 +35,7 @@ const FreeVerse = ({ data }) => {
 
   return (
     <Layout
-      pageTitle='Free Verse'
+      pageHeader='Free Verse'
       mainClassName={classes.layout}
     >
       <div className={classes.items}>

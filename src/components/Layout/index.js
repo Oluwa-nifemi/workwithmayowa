@@ -5,28 +5,39 @@ import Footer from "../Footer"
 import { classNames } from "../../util/functions"
 import SEO from "../SEO"
 
-const Layout = ({ children, isPageHeight = false, mainClassName, centerFooter = true, pageTitle, titleTemplate = true, description }) => {
+const Layout = (
+  {
+    children,
+    isPageHeight = false,
+    mainClassName,
+    centerFooter = true,
+    pageTitle,
+    pageHeader,
+    titleTemplate = true,
+    description
+  }
+) => {
   return (
     <div className={classNames(classes.layout, isPageHeight && classes.layoutPageHeight)}>
       <SEO
-        title={pageTitle}
+        title={pageTitle || pageHeader}
         titleTemplate={titleTemplate}
         description={description}
       />
-      <Header/>
+      <Header />
       {
-        pageTitle && (
+        pageHeader && (
           <h1 className={classes.pageTitle}>
-            {pageTitle}
+            {pageHeader}
           </h1>
         )
       }
       <main className={classNames(mainClassName, classes.main)}>
         {children}
       </main>
-      <Footer centerFooter={centerFooter}/>
+      <Footer centerFooter={centerFooter} />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

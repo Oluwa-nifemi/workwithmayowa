@@ -13,6 +13,8 @@ const ArticleLayout = ({ children, pageContext }) => {
   const marginTop = pageContext.frontmatter.marginTop
   const type = pageContext.frontmatter.type
 
+  const { title, header, description } = pageContext.frontmatter
+
   return (
     <MDXProvider
       components={{
@@ -31,7 +33,9 @@ const ArticleLayout = ({ children, pageContext }) => {
     >
       <Layout
         mainClassName={classes.layout}
-        pageTitle={pageContext.frontmatter.title}
+        pageTitle={title}
+        pageHeader={header}
+        description={description}
       >
         {children}
         <BackLink

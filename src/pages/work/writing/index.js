@@ -65,7 +65,9 @@ const Writing = ({ data }) => {
     <WritingDesignLayout
       data={data}
       sections={sections}
-      pageTitle='Writing'
+      pageTitle='Writing: Copywriting, UX Writing'
+      pageHeader='Writing'
+      description='Words are special to me as copywriter and UX Writer. From delighting customers and eliciting emotions about brands, to guiding people’s seamless interactions within and outside a product.'
     />
   )
 }

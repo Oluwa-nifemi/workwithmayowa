@@ -50,7 +50,9 @@ const Design = ({ data }) => {
     <WritingDesignLayout
       data={data}
       sections={sections}
-      pageTitle='Design'
+      pageTitle='Design works'
+      pageHeader='Design'
+      description='Design is my second love. I stumbled upon Design Thinking and this refined how I saw design and its ability to solve real problems and make people’s lives better.'
     />
   )
 }

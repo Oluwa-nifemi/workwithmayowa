@@ -17,6 +17,7 @@ const Lost = () => {
   return (
     <Layout
       mainClassName={classes.lost}
+      pageTitle='404'
     >
       <h1 className={classes.pageTitle}>
         You’ve Unlocked My Secret <span className={classes.strikethrough}>Broken</span> Page

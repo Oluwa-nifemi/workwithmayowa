@@ -221,7 +221,8 @@ const DailyUi = ({ data }) => {
       pageContext={{
         frontmatter: {
           type: "Design",
-          title: "Daily UI Challenge",
+          header: "Daily UI Challenge",
+          description: "I signed up for the Daily UI Challenge and got mail prompts to design user interface elements for web and mobile. I did 24 of them and enjoyed working on it.",
           marginTop: 50
         }
       }}

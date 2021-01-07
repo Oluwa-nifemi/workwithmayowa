@@ -77,7 +77,9 @@ const Contact = () => {
   )
   return (
     <Layout
-      pageTitle='Contact'
+      pageTitle='Contact. Say Hello'
+      pageHeader='Contact'
+      description='Say Hello. You can contact me on LinkedIn, Twitter & Instagram (@Mayowady) or send a mail to hello@workwithmayowa.com.'
       mainClassName={classes.main}
     >
       {

@@ -4,7 +4,7 @@ import Layout from "../../components/Layout"
 import Card from "../../components/Card"
 import MobileCarousel from "../../components/MobileCarousel"
 
-const WritingDesignLayout = ({ data, sections, pageTitle }) => {
+const WritingDesignLayout = ({ data, sections, pageTitle, description, pageHeader }) => {
   const images = useMemo(() => {
     const nodes = data.allFile.nodes
 
@@ -18,7 +18,11 @@ const WritingDesignLayout = ({ data, sections, pageTitle }) => {
   }, [data.allFile.nodes])
 
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout
+      pageTitle={pageTitle}
+      description={description}
+      pageHeader={pageHeader}
+    >
       {
         sections.map(({ title, items }) => (
           <div className={classes.section}>

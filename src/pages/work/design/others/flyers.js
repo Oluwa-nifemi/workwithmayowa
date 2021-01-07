@@ -24,7 +24,7 @@ const Flyers = ({ data }) => {
       pageContext={{
         frontmatter: {
           type: "Design",
-          title: 'Digital/Flyers'
+          header: 'Digital/Flyers'
         }
       }}
     >

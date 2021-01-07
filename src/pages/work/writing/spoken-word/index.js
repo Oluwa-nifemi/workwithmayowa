@@ -27,7 +27,7 @@ const items = [
 const SpokenWord = () => {
   return (
     <Layout
-      pageTitle='Spoken Word'
+      pageHeader='Spoken Word'
       mainClassName={classes.layout}
     >
       <div className={classes.items}>

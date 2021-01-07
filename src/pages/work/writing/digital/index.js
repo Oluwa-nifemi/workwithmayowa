@@ -72,7 +72,9 @@ const Digital = ({ data }) => {
 
   return (
     <Layout
-      pageTitle='Digital/Print'
+      pageHeader='Digital/Print'
+      pageTitle='Writing: Digital & Print ads'
+      description='These are some creative digital and print ads I’ve worked on for brands as a copywriter.'
       mainClassName={classes.layout}
     >
       <div className={classes.items}>

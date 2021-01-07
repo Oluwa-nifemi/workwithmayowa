@@ -28,7 +28,11 @@ const items = [
 
 const Radio = () => {
   return (
-    <Layout pageTitle='Radio/Audio'>
+    <Layout
+      pageHeader='Radio/Audio'
+      pageTitle='Writing: Radio commercials'
+      description='These are some produced radio ad commercials I’ve written for brands as a creative copywriter.'
+    >
       <div className={classes.items}>
         {
           items.map(({ name, description, fileName }) => (

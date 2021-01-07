@@ -4,7 +4,6 @@ import classes from "./index.module.css"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
-import SEO from "../components/SEO"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState({})
@@ -23,8 +22,10 @@ const Index = ({ data }) => {
       isPageHeight
       mainClassName={classes.main}
       centerFooter={false}
+      titleTemplate={false}
+      pageTitle='Mayowa Adeyemi | UX Writer, Copywriter, Designer'
+      description='Hello, I’m Mayowa Adeyemi, a UX Writer, Copywriter and Designer based in Lagos Nigeria.'
     >
-      <SEO title='Home'/>
       <h1 className={classes.intro}>
         Hello, I’m Mayowa Adeyemi, a {' '}
         <Link
