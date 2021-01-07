@@ -26,6 +26,11 @@
   padding: 0 22.85%;
 }
 
+.articleText a{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .articleTextSmallMargin{
   margin-bottom: 30px;
 }

@@ -228,7 +228,7 @@ const DailyUi = ({ data }) => {
       }}
     >
       <ArticleTextSmall>
-        I signed up for the Daily UI Challenge and got mail prompts to design user interface elements for web and
+        I signed up for the <a href="https://www.dailyui.co/" target="_blank">Daily UI Challenge</a> and got mail prompts to design user interface elements for web and
         mobile. I did 24 of them and enjoyed working on it.
       </ArticleTextSmall>
       <div className={classes.itemsWrapper}>
