@@ -67,6 +67,14 @@ function SEO({ description, lang = 'en', meta, title, titleTemplate }) {
         {
           name: `og:image`,
           content: `https://www.workwithmayowa.com/potrait.jpg`
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `Portrait picture of Mayowa`
+        },
+        {
+          name: `og:site_name`,
+          content: `Nigeria`
         }
       ].concat(meta)}
     />
