@@ -49,8 +49,12 @@ function SEO({ description, lang = 'en', meta, title, titleTemplate }) {
           content: `summary`
         },
         {
+          name: `twitter:site`,
+          content: '@mayowady'
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: `@n1femi`
         },
         {
           name: `twitter:title`,
