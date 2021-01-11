@@ -63,6 +63,10 @@ function SEO({ description, lang = 'en', meta, title, titleTemplate }) {
         {
           name: `twitter:description`,
           content: metaDescription
+        },
+        {
+          name: `og:image`,
+          content: `https://www.workwithmayowa.com/potrait.jpg`
         }
       ].concat(meta)}
     />
