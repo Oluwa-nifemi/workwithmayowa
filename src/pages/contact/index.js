@@ -98,7 +98,7 @@ const Contact = () => {
               <a href="https://www.instagram.com/mayowady/" target='_blank' rel='noreferrer'>Instagram</a>{" "}
               {" "}or send a mail to{" "}
               <a
-                href="mailto:oluwamayowaadeyemi@gmail.com" target='_blank' rel='noreferrer'
+                href="mailto:hello@workwithmayowa.com." target='_blank' rel='noreferrer'
               >hello@workwithmayowa.com.</a>
             </h5>
           </>
@@ -114,7 +114,7 @@ const Contact = () => {
               <a href="https://www.instagram.com/mayowady/" target='_blank' rel='noreferrer'>Instagram</a>{" "}
               {" "}or send a mail to{" "}
               <a
-                href="mailto:oluwamayowaadeyemi@gmail.com" target='_blank' rel='noreferrer'
+                href="mailto:hello@workwithmayowa.com." target='_blank' rel='noreferrer'
               >hello@workwithmayowa.com.</a>{" "}
               You can also fill the form below and I’ll get in touch with you.
             </h5>
