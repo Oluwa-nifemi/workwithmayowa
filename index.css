@@ -94,7 +94,11 @@ body{
   }
 
   .name-text, .hi-text{
-    font-size: 48px;
+    font-size: 36px;
+
+    &::before{
+      border-radius: 16px;
+    }
   }
 
   .name-text{
