@@ -8,3 +8,6 @@ command = ""
 from = "/*"
 to = "/index.html"
 status = 200
+
+# Explicitly specifying no plugins
+[plugins]
