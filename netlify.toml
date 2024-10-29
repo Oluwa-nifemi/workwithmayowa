@@ -3,8 +3,3 @@
 publish = "/"
 # No build command is needed for a static site with just an index.html
 command = ""
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
